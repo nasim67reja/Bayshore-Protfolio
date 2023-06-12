@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tailwind class */
+
+.container {
+  @apply max-w-[1298px] mx-auto px-[20px];
+}
+.text-link {
+  @apply text-[12px] sm:text-[13px] lg:text-[14px];
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
