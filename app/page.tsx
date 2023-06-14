@@ -1,12 +1,14 @@
+import Swiper from "@/components/Swiper";
+import HomeHeroCard from "@/components/unique/Home/HomeHeroCard";
 import HomeServiceCard from "@/components/unique/Home/HomeServiceCard";
 import Progress from "@/components/unique/Home/Progress";
 import HomeTabBar from "@/components/unique/HomeTabBar";
 import Footer from "@/components/universal/Footer";
+import Info from "@/components/universal/Info";
 import Navbar from "@/components/universal/Navbar";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
-// AiOutlineRight
 
 const page = () => {
   return (
@@ -85,6 +87,15 @@ const page = () => {
             </span>
           </button>
         </form>
+        <div className="mt-20 flex gap-12">
+          <HomeHeroCard heading="Business Growth Increased By" stat="+87%" />
+          <HomeHeroCard heading="Website Engagement Increased By" stat="+71%" />
+          <HomeHeroCard
+            heading="Social Media Engagement Increased By"
+            stat="+60%"
+          />
+          <HomeHeroCard heading="Business Growth Increased By" stat="+87%" />
+        </div>
       </SectionLayout>
       {/* Campaigns */}
       <SectionLayout bg="">
@@ -110,6 +121,8 @@ const page = () => {
           </div>
         </div>
       </SectionLayout>
+      {/* info */}
+      <Info />
       {/* Benefits */}
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex flex-col items-center">
@@ -134,8 +147,28 @@ const page = () => {
               long-term success.
             </p>
           </div>
-          <div className="flex-1">
-            <Progress />
+          <div className="flex-1 flex flex-col gap-12 pl-[5rem]">
+            <Progress
+              title="Business Automation"
+              bg="bg-[#FFBF45]"
+              border="border-[#FFBF45]"
+              percentage="w-[90%]"
+              percentageVal="90%"
+            />
+            <Progress
+              title="Advanced Technology"
+              bg="bg-[#3A7EEE]"
+              border="border-[#3A7EEE]"
+              percentage="w-[99%]"
+              percentageVal="99%"
+            />
+            <Progress
+              title="Industry Specific Expertise"
+              bg="bg-[#6C6C6C]"
+              border="border-[#6C6C6C]"
+              percentage="w-[95%]"
+              percentageVal="95%"
+            />
           </div>
         </div>
       </SectionLayout>
@@ -172,13 +205,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-8">
-          <Image
-            src="/assets/marketing.svg"
-            alt="marketing"
-            width={1200}
-            height={1200}
-            className="w-full h-auto"
-          />
+          <Swiper />
         </div>
       </SectionLayout>
       {/*  Result */}
@@ -209,6 +236,7 @@ const page = () => {
           />
         </div>
       </SectionLayout>
+
       <Footer />
     </>
   );
