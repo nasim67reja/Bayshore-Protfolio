@@ -1,5 +1,9 @@
 import Swiper from "@/components/Swiper";
+import FocusOnSelect from "@/components/unique/DemoSlider";
+import DemoSlider from "@/components/unique/DemoSlider";
 import HomeHeroCard from "@/components/unique/Home/HomeHeroCard";
+import HomeLogoLoop from "@/components/unique/Home/HomeLogoLoop";
+import LogoSlide from "@/components/unique/Home/HomeLogoSlider";
 import HomeServiceCard from "@/components/unique/Home/HomeServiceCard";
 import Progress from "@/components/unique/Home/Progress";
 import HomeTabBar from "@/components/unique/HomeTabBar";
@@ -49,6 +53,12 @@ const page = () => {
             />
           </div>
         </div>
+      </SectionLayout>
+
+      {/* Logo section */}
+      <SectionLayout bg="">
+        {/* <LogoSlide /> */}
+        <HomeLogoLoop />
       </SectionLayout>
       {/* Tailored */}
       <SectionLayout bg="">
@@ -205,7 +215,8 @@ const page = () => {
           </p>
         </div>
         <div className="mt-8">
-          <Swiper />
+          <FocusOnSelect />
+          {/* <Swiper /> */}
         </div>
       </SectionLayout>
       {/*  Result */}
