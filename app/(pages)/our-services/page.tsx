@@ -1,3 +1,5 @@
+import Info from "@/components/universal/Info";
+import SLiderSec from "@/components/universal/SLiderSec";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import React from "react";
@@ -21,6 +23,42 @@ hero = [
   },
 ];
 
+let services: {
+  logo: string;
+  title: string;
+  description: string;
+}[];
+services = [{ logo: "sjd", title: "Website Design", description: "kdjflks" }];
+
+const Service = () => {
+  return (
+    <div className="flex flex-col  items-center gap-[1rem] custom-shadow px-[3rem] pt-[3rem] pb-[1rem]">
+      <div>
+        <Image
+          src="/assets/service/web.svg"
+          alt="service-hero"
+          width={399}
+          height={400}
+          className="w-[99px] h-[99px] mb-[1.5rem]"
+        />
+      </div>
+      <h4 className="heading-four">Website Design</h4>
+      <p className="text-base">
+        Web design and development is a related term to creating a website. Web
+        design determines the look by UI/UX. On the other side web development
+        determines the functions. Our front-end developers are skilled and work
+        with several languages, frameworks, template design, libraries, git and
+        github as well as SEO. Our back-end developers deal...
+      </p>
+      <button className="flex items-center gap-2 text-[#FE6F1F]">
+        <span>Read more</span>
+        <span className="inline-block translate-y-[1px]">
+          <AiOutlineRight />
+        </span>
+      </button>
+    </div>
+  );
+};
 const page = () => {
   return (
     <>
@@ -55,6 +93,34 @@ const page = () => {
               className="w-[455px] h-[491px]"
             />
           </div>
+        </div>
+      </SectionLayout>
+      <Info />
+      <SectionLayout bg="">
+        <h2 className="heading-secondary text-center">Our Services</h2>
+        <div className="grid grid-cols-2 gap-[8rem] mt-[6rem]">
+          <Service />
+          <Service />
+        </div>
+      </SectionLayout>
+
+      <SLiderSec />
+      <SectionLayout bg="">
+        <div className="flex flex-col items-center">
+          <h2 className="heading-secondary ">
+            Here is what our client saying about us
+          </h2>
+          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
+            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
+            use. The Flat is great to put under any phone case(non-metal) Use.
+          </p>
+
+          <button className="btn text-[14px] !py-4 flex items-center gap-8">
+            <span>Book now 30 min Free Consultation</span>
+            <span className="inline-block translate-y-[1px]">
+              <AiOutlineRight />
+            </span>
+          </button>
         </div>
       </SectionLayout>
     </>
