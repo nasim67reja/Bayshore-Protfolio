@@ -21,12 +21,12 @@ const page = () => {
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">
           <div className="flex-1">
-            <p className="text-[16px] md:text-[20px] text-[#3E7BE2] mb-[0.5rem]">
+            <p className="text-[16px] md:text-[20px] text-[#3E7BE2] mb-[2.5rem]">
               {hero[0].text}
             </p>
             <h1 className="heading-primary">{hero[0].heading}</h1>
             <p className="text-base">{hero[0].description}</p>
-            <form className="flex items-center gap-8 mt-7">
+            <form className="flex items-center gap-8 mt-[2.5rem]">
               <input
                 className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4"
                 type="text"
