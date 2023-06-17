@@ -1,3 +1,4 @@
+import Count from "../Count";
 import SectionLayout from "./SectionLayout";
 import Image from "next/image";
 
@@ -30,14 +31,18 @@ const Info = () => {
             </div>
 
             <div className="flex flex-col">
-              <p className="info-text text-center">500+</p>
+              <p className="info-text text-center">
+                <Count num={500} duration={3} />+
+              </p>
               <p className="text-base mb-2 opacity-80 !text-[#fff]">
                 Digital Marketing Masters On Staff
               </p>
             </div>
 
             <div className="flex flex-col">
-              <p className="info-text text-center">1,128</p>
+              <p className="info-text text-center">
+                <Count num={1128} duration={3} />
+              </p>
               <p className="text-base mb-2 opacity-80 !text-[#fff]">
                 Websites Launched
               </p>

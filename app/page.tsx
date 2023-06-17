@@ -1,3 +1,4 @@
+import Count from "@/components/Count";
 import Swiper from "@/components/Swiper";
 import FocusOnSelect from "@/components/unique/DemoSlider";
 import DemoSlider from "@/components/unique/DemoSlider";
@@ -13,6 +14,34 @@ import Navbar from "@/components/universal/Navbar";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
+
+const Box1: any = [
+  "SEO Services",
+  "Ecommerce SEO Services",
+  "Local SEO Services",
+  "Content Marketing Services",
+];
+
+const Box2: any = [
+  "PPC Management Services",
+  "Social Advertising Services",
+  "Programmatic Advertising Services",
+  "Geofencing Advertising Services",
+];
+
+const Box3: any = [
+  "MarketingCloudFX",
+  "Nutshell",
+  "Website Call Tracking",
+  "Lead Management",
+];
+
+const Box4: any = [
+  "Website Design Services",
+  "CRO Services",
+  "Landing Page Design Services",
+  "Social Media Management Services",
+];
 
 const page = () => {
   return (
@@ -98,13 +127,13 @@ const page = () => {
           </button>
         </form>
         <div className="mt-20 flex gap-12">
-          <HomeHeroCard heading="Business Growth Increased By" stat="+87%" />
-          <HomeHeroCard heading="Website Engagement Increased By" stat="+71%" />
+          <HomeHeroCard heading="Business Growth Increased By" stat={87} />
+          <HomeHeroCard heading="Website Engagement Increased By" stat={71} />
           <HomeHeroCard
             heading="Social Media Engagement Increased By"
-            stat="+60%"
+            stat={60}
           />
-          <HomeHeroCard heading="Business Growth Increased By" stat="+87%" />
+          <HomeHeroCard heading="Business Growth Increased By" stat={87} />
         </div>
       </SectionLayout>
       {/* Campaigns */}
@@ -122,12 +151,28 @@ const page = () => {
         </div>
         <div className="mt-8">
           <div className="flex mb-8 gap-8">
-            <HomeServiceCard />
-            <HomeServiceCard />
+            <HomeServiceCard
+              imgLink="/assets/web.svg"
+              title="Grow Website Organic Traffic"
+              box={Box1}
+            />
+            <HomeServiceCard
+              imgLink="/assets/data.svg"
+              title="Targeted Data-Driven ad campaigns"
+              box={Box2}
+            />
           </div>
           <div className="flex gap-8">
-            <HomeServiceCard />
-            <HomeServiceCard />
+            <HomeServiceCard
+              imgLink="/assets/analytics.svg"
+              title="Tracking, Measure and Management "
+              box={Box3}
+            />
+            <HomeServiceCard
+              imgLink="/assets/note.svg"
+              title="Improve ROI and Conversion"
+              box={Box4}
+            />
           </div>
         </div>
       </SectionLayout>
@@ -247,7 +292,6 @@ const page = () => {
           />
         </div>
       </SectionLayout>
-
       <Footer />
     </>
   );

@@ -12,12 +12,20 @@ const links: string[] = [
   "Contact",
 ];
 
-// make the link text to actual link
-function formatString(input: string): string {
-  const withoutWhitespace = input.replace(/\s/g, "-");
-  const formattedString = withoutWhitespace.replace(/ /g, "-");
-  return formattedString.toLowerCase();
-}
+let linksO: {
+  title: string;
+  link: string;
+}[];
+
+linksO = [
+  { title: "Home", link: "/" },
+  { title: "About", link: "/about-us" },
+  { title: "Service", link: "/our-services" },
+  { title: "Growth Plan", link: "/growth-plan" },
+  { title: "Case Studies", link: "/case-studies" },
+  { title: "Blog", link: "/blog" },
+  { title: "Contact", link: "/contact" },
+];
 
 const Navbar = () => {
   return (
@@ -35,9 +43,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="flex items-center justify-center gap-[2.6rem]">
-            {links.map((el: string, i: number) => (
+            {linksO.map((el: { title: string; link: string }, i: number) => (
               <li className="text-link" key={i}>
-                <Link href={`/${formatString(el)}`}>{el}</Link>
+                <Link href={`${el.link}`}>{el.title}</Link>
               </li>
             ))}
           </ul>

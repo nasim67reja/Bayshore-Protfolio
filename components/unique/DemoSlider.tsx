@@ -15,6 +15,9 @@ interface Settings {
   centerMode: boolean;
   centerPadding: string;
   arrows: boolean;
+  fade: boolean;
+  swipe: boolean;
+  draggable: boolean;
 }
 
 const FocusOnSelect: React.FC = () => {
@@ -33,7 +36,6 @@ const FocusOnSelect: React.FC = () => {
     arrows: true,
   };
   const settings2: Settings = {
-    focusOnSelect: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -41,124 +43,76 @@ const FocusOnSelect: React.FC = () => {
     centerMode: true,
     centerPadding: "0px",
     arrows: false,
+    swipe: false,
+    draggable: false,
+    focusOnSelect: false,
+  };
+
+  const settings3: Settings = {
+    focusOnSelect: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    centerMode: true,
+    centerPadding: "0px",
+    arrows: false,
+    fade: true,
+    swipe: false,
+    draggable: false,
   };
 
   const [nav1, setNav1] = useState<Slider | null>(null);
   const [nav2, setNav2] = useState<Slider | null>(null);
+  const [nav3, setNav3] = useState<Slider | null>(null);
+
   return (
     <>
-      <div className="flex justify-center items-center mt-[8rem] mb-[5rem] gap-[6.5rem]">
-        {/* <div>{`${slides[activeSlides[0]]}`}</div> */}
-        {activeSlides[0] === -1 ? (
-          <div className="">
-            {/* {slides[4]} */}
-
-            <Image
-              src={slides[4]}
-              alt="trip-law"
-              width={1000}
-              height={1000}
-              className="w-[350px] h-auto"
-            />
-          </div>
-        ) : (
-          <div className="">
-            {/* {slides[activeSlides[0]]} */}
-            <Image
-              src={slides[activeSlides[0]]}
-              alt="trip-law"
-              width={1000}
-              height={1000}
-              className="w-[350px] h-auto"
-            />
-          </div>
-        )}
-        {/* middle */}
-        <div className="custom-shadow  scale-125  ">
-          {/* {slides[activeSlides[1]]} */}
+      <div className="my-[5rem]">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider: Slider) => setNav2(slider)}
+          {...settings2}
+        >
           <Image
-            src={slides[activeSlides[1]]}
+            src={slides[0]}
             alt="trip-law"
             width={1000}
             height={1000}
             className="w-[350px] h-auto"
           />
-        </div>
-
-        {/* right */}
-        {activeSlides[2] === 5 ? (
-          <div className="">
-            {/* {slides[0]} */}
-            <Image
-              src={slides[0]}
-              alt="trip-law"
-              width={1000}
-              height={1000}
-              className="w-[350px] h-auto"
-            />
-          </div>
-        ) : (
-          <div className="">
-            {/* {slides[activeSlides[2]]} */}
-            <Image
-              src={slides[activeSlides[2]]}
-              alt="trip-law"
-              width={1000}
-              height={1000}
-              className="w-[350px] h-auto"
-            />
-          </div>
-        )}
+          <Image
+            src={slides[1]}
+            alt="trip-law"
+            width={1000}
+            height={1000}
+            className="w-[350px] h-auto"
+          />
+          <Image
+            src={slides[2]}
+            alt="trip-law"
+            width={1000}
+            height={1000}
+            className="w-[350px] h-auto"
+          />
+          <Image
+            src={slides[3]}
+            alt="trip-law"
+            width={1000}
+            height={1000}
+            className="w-[350px] h-auto"
+          />
+          <Image
+            src={slides[4]}
+            alt="trip-law"
+            width={1000}
+            height={1000}
+            className="w-[350px] h-auto"
+          />
+        </Slider>
       </div>
-
-      <Slider
-        asNavFor={nav2}
-        ref={(slider: Slider) => setNav1(slider)}
-        {...settings2}
-      >
-        <Image
-          src={slides[0]}
-          alt="trip-law"
-          width={1000}
-          height={1000}
-          className="w-[350px] h-auto"
-        />
-        <Image
-          src={slides[1]}
-          alt="trip-law"
-          width={1000}
-          height={1000}
-          className="w-[350px] h-auto"
-        />
-        <Image
-          src={slides[2]}
-          alt="trip-law"
-          width={1000}
-          height={1000}
-          className="w-[350px] h-auto"
-        />
-        <Image
-          src={slides[3]}
-          alt="trip-law"
-          width={1000}
-          height={1000}
-          className="w-[350px] h-auto"
-        />
-        <Image
-          src={slides[4]}
-          alt="trip-law"
-          width={1000}
-          height={1000}
-          className="w-[350px] h-auto"
-        />
-      </Slider>
-
       <div className="testimonial-slider max-w-[470px] mx-auto ">
-        <Slider
-          {...settings}
-          asNavFor={nav1}
-          ref={(slider: Slider) => setNav2(slider)}
-        >
+        <Slider {...settings} asNavFor={nav1} ref={(slider) => setNav3(slider)}>
           <div className="">
             <Image
               alt="test"
@@ -203,18 +157,44 @@ const FocusOnSelect: React.FC = () => {
       </div>
 
       <div>
-        {/* <Slider {...settings}>
-          <BoxContent content="1" />
-          <BoxContent content="2" />
-          <BoxContent content="3" />
-          <BoxContent content="4" />
-          <BoxContent content="5" />
-        </Slider> */}
-        {activeSlides[1] === 0 && <BoxContent content="1" />}
-        {activeSlides[1] === 1 && <BoxContent content="2" />}
-        {activeSlides[1] === 2 && <BoxContent content="3" />}
-        {activeSlides[1] === 3 && <BoxContent content="4" />}
-        {activeSlides[1] === 4 && <BoxContent content="5" />}
+        <Slider
+          asNavFor={nav2}
+          ref={(slider: Slider) => setNav1(slider)}
+          {...settings3}
+        >
+          <BoxContent
+            content="1"
+            text=" Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
+        use. The Flat is great to put under any phone case(non-metal) Users can
+        download our app to program any of our NFC’s with the click of a button."
+          />
+          <BoxContent
+            content="2"
+            text="Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
+        use. The Flat is great to put under any phone case(non-metal) Users can
+        download our app to program any of our NFC’s with the click of a button.
+        This will attach your profile to the NFC for easy sharing. You just tap
+        the NFC on any compatible phone to share your digital business card"
+          />
+          <BoxContent
+            content="3"
+            text="download our app to program any of our NFC’s with the click of a button.
+        This will attach your profile to the NFC for easy sharing. You just tap
+        the NFC on any compatible phone to share your digital business card"
+          />
+          <BoxContent
+            content="4"
+            text="and simple to
+        use. The Flat is great to put under any phone case(non-metal) Users can
+        download our app to program any of our NFC’s with the click of a button."
+          />
+          <BoxContent
+            content="5"
+            text="NFC’s with the click of a button.
+        This will attach your profile to the NFC for easy sharing. You just tap
+        the NFC on any compatible phone to share your digital business card"
+          />
+        </Slider>
       </div>
     </>
   );
@@ -224,18 +204,20 @@ export default FocusOnSelect;
 
 interface demo {
   content: string;
+  text: string;
 }
-const BoxContent = ({ content }: demo) => {
+const BoxContent = ({ content, text }: demo) => {
   return (
     <div className="fade-in-animation max-w-[650px] mx-auto mt-[3rem] flex flex-col items-center">
       <h3 className="heading-tertiary ">Trip Law {content}</h3>
       <p className="mb-4 font-semibold">Immigration Lawyer {content}</p>
       <p className="text-link !text-center">
-        Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
+        {text}
+        {/* Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
         use. The Flat is great to put under any phone case(non-metal) Users can
         download our app to program any of our NFC’s with the click of a button.
         This will attach your profile to the NFC for easy sharing. You just tap
-        the NFC on any compatible phone to share your digital business card.
+        the NFC on any compatible phone to share your digital business card. */}
       </p>
     </div>
   );

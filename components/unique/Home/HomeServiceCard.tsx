@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-const Box = () => {
+interface con {
+  content: string;
+}
+
+const Box: React.FC<con> = ({ content }) => {
   return (
     <div className="flex gap-4 items-center">
       <Image
@@ -11,21 +15,25 @@ const Box = () => {
         height={50}
         className="w-[20px] h-[20px]"
       />
-      <p className="underline text-[#207DE9]">SEO Services</p>
+      <p className="underline text-[#207DE9]">{content}</p>
     </div>
   );
 };
 
-const HomeServiceCard = () => {
+interface box {
+  title: string;
+  imgLink: string;
+  box: any;
+}
+
+const HomeServiceCard: React.FC<box> = ({ title, imgLink, box }) => {
   return (
-    <div className="flex-1 border-2 border-[#DBDBDB]  rounded-[10px] px-[1rem] py-[2rem]">
+    <div className="flex-1 border-2 border-[#DBDBDB]  rounded-[10px] px-[3rem] py-[2rem]">
       <div className="flex justify-between items-center">
-        <h3 className="heading-tertiary !text-[#222]">
-          Grow Website Organic Traffic
-        </h3>
+        <h3 className="heading-tertiary !text-[#222]">{title}</h3>
         <div>
           <Image
-            src="/assets/web.svg"
+            src={imgLink}
             alt="marketing"
             width={100}
             height={100}
@@ -34,10 +42,13 @@ const HomeServiceCard = () => {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-8 mt-8">
+        {box.map((el: string, i: number) => (
+          <Box key={i} content={el} />
+        ))}
+        {/* <Box />
         <Box />
         <Box />
-        <Box />
-        <Box />
+        <Box /> */}
       </div>
     </div>
   );
