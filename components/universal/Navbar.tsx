@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
 
 const links: string[] = [
@@ -28,6 +31,8 @@ linksO = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <header>
       <nav className="container flex justify-between items-center py-[1.8rem]">
@@ -44,7 +49,12 @@ const Navbar = () => {
         <div>
           <ul className="flex items-center justify-center gap-[2.6rem]">
             {linksO.map((el: { title: string; link: string }, i: number) => (
-              <li className="text-link" key={i}>
+              <li
+                className={`text-link ${
+                  pathname === el.link ? "active border-2 border-black" : ""
+                }`}
+                key={i}
+              >
                 <Link href={`${el.link}`}>{el.title}</Link>
               </li>
             ))}

@@ -8,9 +8,12 @@ import LogoSlide from "@/components/unique/Home/HomeLogoSlider";
 import HomeServiceCard from "@/components/unique/Home/HomeServiceCard";
 import Progress from "@/components/unique/Home/Progress";
 import HomeTabBar from "@/components/unique/HomeTabBar";
+import AboutUs from "@/components/universal/AboutUs";
+import Boost from "@/components/universal/Boost";
 import Footer from "@/components/universal/Footer";
 import Info from "@/components/universal/Info";
 import Navbar from "@/components/universal/Navbar";
+import Results from "@/components/universal/Results";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
@@ -106,36 +109,11 @@ const page = () => {
       </SectionLayout>
 
       {/* Boost */}
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <h2 className="heading-secondary text-center">
-          Need a boost for you business? Get your FREE Quote Today!
-        </h2>
-        <form className="flex items-center gap-12 mt-[4rem] max-w-[100rem] mx-auto">
-          <input
-            className="rounded-[10px] outline-none text-link py-6 px-8 flex-1"
-            type="text"
-            placeholder="Enter your email"
-          />
-          <button
-            type="submit"
-            className="btn text-[14px] !py-6 flex items-center gap-8"
-          >
-            <span>Send us a proposal</span>
-            <span className="inline-block translate-y-[1px]">
-              <AiOutlineRight />
-            </span>
-          </button>
-        </form>
-        <div className="mt-20 flex gap-12">
-          <HomeHeroCard heading="Business Growth Increased By" stat={87} />
-          <HomeHeroCard heading="Website Engagement Increased By" stat={71} />
-          <HomeHeroCard
-            heading="Social Media Engagement Increased By"
-            stat={60}
-          />
-          <HomeHeroCard heading="Business Growth Increased By" stat={87} />
-        </div>
-      </SectionLayout>
+
+      <Boost
+        heading=" Need a boost for you business? Get your FREE Quote Today!"
+        btnText="Send us a proposal"
+      />
       {/* Campaigns */}
       <SectionLayout bg="">
         <div className="flex flex-col items-center">
@@ -249,49 +227,9 @@ const page = () => {
         </div>
       </SectionLayout>
       {/* about us */}
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            Here is what our client saying about us
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
-          </p>
-        </div>
-        <div className="mt-8">
-          <FocusOnSelect />
-          {/* <Swiper /> */}
-        </div>
-      </SectionLayout>
+      <AboutUs />
       {/*  Result */}
-      <SectionLayout bg="">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">We Have Some Amazing Results</h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
-          </p>
-          <button
-            type="submit"
-            className="btn text-[14px] !py-4 flex items-center gap-8"
-          >
-            <span>View our success stories</span>
-            <span className="inline-block translate-y-[1px]">
-              <AiOutlineRight />
-            </span>
-          </button>
-        </div>
-        <div className="mt-8">
-          <Image
-            src="/assets/results.svg"
-            alt="marketing"
-            width={1200}
-            height={1200}
-            className="w-full h-auto"
-          />
-        </div>
-      </SectionLayout>
+      <Results heading="We Have Some Amazing Results" />
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import SectionLayout from "./SectionLayout";
 import FocusOnSelect from "../unique/DemoSlider";
 
-const SLiderSec = () => {
+const AboutUs = () => {
   return (
     <SectionLayout bg="bg-[#F4F4F4]">
       <div className="flex flex-col items-center">
@@ -16,10 +16,9 @@ const SLiderSec = () => {
       </div>
       <div className="mt-8">
         <FocusOnSelect />
-        {/* <Swiper /> */}
       </div>
     </SectionLayout>
   );
 };
 
-export default SLiderSec;
+export default AboutUs;

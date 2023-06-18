@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "@/components/universal/Footer";
 import Navbar from "@/components/universal/Navbar";
 import { LayoutProps } from "@/types/LayoutProps";

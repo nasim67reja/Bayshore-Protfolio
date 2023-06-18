@@ -1,5 +1,8 @@
+import AboutUs from "@/components/universal/AboutUs";
+import Consultaion from "@/components/universal/Consultaion";
+import HeroLeft from "@/components/universal/HeroLeft";
+import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
-import SLiderSec from "@/components/universal/SLiderSec";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import React from "react";
@@ -28,28 +31,140 @@ let services: {
   title: string;
   description: string;
 }[];
-services = [{ logo: "sjd", title: "Website Design", description: "kdjflks" }];
+services = [
+  {
+    logo: "/assets/service/web.svg",
+    title: "Website Design",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
 
-const Service = () => {
+  {
+    logo: "/assets/service/web.svg",
+    title: "Mobile App",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: " SEO",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Local SEO",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Paid Advertising",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Social Media Marketing",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Social Media Management",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Email Marketing",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Marketing Automation ",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+  {
+    logo: "/assets/service/web.svg",
+    title: "Content Marketing ",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+  {
+    logo: "/assets/service/web.svg",
+    title: "Content Writing",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Digital PR",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Graphic Design",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Motion Graphic",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Video Production ",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+
+  {
+    logo: "/assets/service/web.svg",
+    title: "Influencer Marketing",
+    description:
+      "Web design and development is a related term to creating a website. Web design determines the look by UI/UX. On the other side web development determines the functions. Our front-end developers are skilled and work with several languages, frameworks, template design, libraries, git and github as well as SEO. Our back-end developers deal...",
+  },
+];
+
+interface ServiceProps {
+  el: {
+    logo: string;
+    title: string;
+    description: string;
+  };
+}
+
+const Service: React.FC<ServiceProps> = ({ el }) => {
   return (
     <div className="flex flex-col  items-center gap-[1rem] custom-shadow px-[3rem] pt-[3rem] pb-[1rem]">
       <div>
         <Image
-          src="/assets/service/web.svg"
+          src={el.logo}
           alt="service-hero"
           width={399}
           height={400}
           className="w-[99px] h-[99px] mb-[1.5rem]"
         />
       </div>
-      <h4 className="heading-four">Website Design</h4>
-      <p className="text-base">
-        Web design and development is a related term to creating a website. Web
-        design determines the look by UI/UX. On the other side web development
-        determines the functions. Our front-end developers are skilled and work
-        with several languages, frameworks, template design, libraries, git and
-        github as well as SEO. Our back-end developers deal...
-      </p>
+      <h4 className="heading-four">{el.title}</h4>
+      <p className="text-base">{el.description}</p>
       <button className="flex items-center gap-2 text-[#FE6F1F]">
         <span>Read more</span>
         <span className="inline-block translate-y-[1px]">
@@ -63,66 +178,36 @@ const page = () => {
   return (
     <>
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <div className="flex-1">
-            <h1 className="heading-primary">{hero[0].heading}</h1>
-            <p className="text-base">{hero[0].description}</p>
-            <form className="flex items-center gap-8 mt-[2.5rem]">
-              <input
-                className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4"
-                type="text"
-                placeholder="Enter your email"
-              />
-              <button
-                type="submit"
-                className="btn text-[14px] !py-4 flex items-center gap-8"
-              >
-                <span>Send us a proposal</span>
-                <span className="inline-block translate-y-[1px]">
-                  <AiOutlineRight />
-                </span>
-              </button>
-            </form>
-          </div>
-          <div className="flex-1">
-            <Image
-              src="/assets/service/service-hero.svg"
-              alt="service-hero"
-              width={800}
-              height={800}
-              className="w-[455px] h-[491px]"
-            />
-          </div>
+        <div className="flex justify-between items-center gap-16">
+          <HeroLeft
+            heading={hero[0].heading}
+            description={hero[0].description}
+          />
+          <HeroRight />
         </div>
       </SectionLayout>
       <Info />
       <SectionLayout bg="">
         <h2 className="heading-secondary text-center">Our Services</h2>
         <div className="grid grid-cols-2 gap-[8rem] mt-[6rem]">
-          <Service />
-          <Service />
+          {services.map(
+            (
+              el: {
+                logo: string;
+                title: string;
+                description: string;
+              },
+              i: number
+            ) => (
+              <Service el={el} key={i} />
+            )
+          )}
         </div>
       </SectionLayout>
 
-      <SLiderSec />
-      <SectionLayout bg="">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            Here is what our client saying about us
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
-          </p>
+      <AboutUs />
 
-          <button className="btn text-[14px] !py-4 flex items-center gap-8">
-            <span>Book now 30 min Free Consultation</span>
-            <span className="inline-block translate-y-[1px]">
-              <AiOutlineRight />
-            </span>
-          </button>
-        </div>
-      </SectionLayout>
+      <Consultaion />
     </>
   );
 };
