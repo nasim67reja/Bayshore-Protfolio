@@ -17,12 +17,11 @@ let hero: {
 hero = [
   {
     heading: "Empower Your Business with Innovative Marketing Solutions",
-    description: ` WebFX is the best SEO services company in the world — and we have
-    the track record to prove it. With our search engine optimization
-    services, you get a custom strategy, world-class technology, and an
-    elite SEO team. We focus on driving revenue for our clients, and we
-    provide all of the services and technology your business needs to grow
-    with SEO.`,
+    description: `Bayshore Communication is a digital marketing company that offers web and app 
+    development, SEO and online advertising, social media and email marketing, 
+    content creation and distribution, UI/UX, graphics, video production, and 
+    influencer marketing services. We provide innovative and practical solutions to 
+    help you expand your company globally and accomplish your goals.`,
   },
 ];
 

@@ -10,8 +10,9 @@ const AboutUs = () => {
           Here is what our client saying about us
         </h2>
         <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-          Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-          use. The Flat is great to put under any phone case(non-metal) Use.
+          Read the feedback from our satisfied clients who have benefited from
+          our services. Their words reflect our high-quality work and dedication
+          to their success.
         </p>
       </div>
       <div className="mt-8">

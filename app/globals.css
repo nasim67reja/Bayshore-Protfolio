@@ -201,3 +201,7 @@ body {
     opacity: 1;
   }
 }
+
+.overflow-hidden .py-4 {
+  padding: 0 !important;
+}

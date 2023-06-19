@@ -14,6 +14,7 @@ import Footer from "@/components/universal/Footer";
 import Info from "@/components/universal/Info";
 import Navbar from "@/components/universal/Navbar";
 import Results from "@/components/universal/Results";
+import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
@@ -68,7 +69,7 @@ const page = () => {
                 type="submit"
                 className="btn text-[14px] !py-4 flex items-center gap-8"
               >
-                <span>Send us a proposal</span>
+                <span>Send us a Proposal</span>
                 <span className="inline-block translate-y-[1px]">
                   <AiOutlineRight />
                 </span>
@@ -99,8 +100,9 @@ const page = () => {
             Tailored marketing solutions for your unique needs
           </h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
+            We deliver results that exceed your expectations, marketing needs,
+            goals and fits your budget. Our expertise, creativity, and passion
+            will make your business shine.
           </p>
         </div>
         <div className="mt-8">
@@ -116,7 +118,7 @@ const page = () => {
       />
       {/* Campaigns */}
       <SectionLayout bg="">
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
           <h2 className="heading-secondary ">
             Drive results through innovative digital marketing campaigns
           </h2>
@@ -126,7 +128,13 @@ const page = () => {
             delight, and convert leads. Toss in our proprietary tech-powered
             suite of tools, and your campaign is unbeatable.
           </p>
-        </div>
+        </div> */}
+        <SectionHeader
+          heading="Drive results through innovative digital marketing campaigns"
+          text="Enhance your online presence and reach more customers with Bayshore Communication.
+We provides an extensive digital marketing services that work in synergy 
+to create, engage, and convert leads. Plus, our exclusive tech-powered tools give you an edge over the competition."
+        />
         <div className="mt-8">
           <div className="flex mb-8 gap-8">
             <HomeServiceCard
@@ -158,26 +166,22 @@ const page = () => {
       <Info />
       {/* Benefits */}
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            Benefits of Choosing Us as Your Digital Marketing Agency
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
-          </p>
-        </div>
+        <SectionHeader
+          heading=" Benefits of Choosing Us as Your Digital Marketing Agency
+          </h2>"
+          text="We offer creative solutions, data-driven strategies, and measurable results for your digital marketing needs. Choose us and grow your business online."
+        />
         <div className="flex mt-12 gap-16 items-center">
           <div className="flex-1">
             <h3 className="heading-tertiary">
               Get Advantage and Access to Our Tools and Expertise
             </h3>
             <p className="text-base">
-              Get more qualified traffic on the search terms that matter most to
-              your business. We achieve measurable results by working on every
-              variable that impacts SERPs. Trust our proven track record to
-              maximize your visibility online. Set your business up for
-              long-term success.
+              Don’t settle for mediocre results. With our cutting-edge tools and
+              experienced team, you can achieve your digital marketing goals
+              faster and easier. No matter what kind of digital marketing
+              service you require, we can deliver it with excellence and
+              efficiency. Get in touch today and get ahead of the competition.
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-12 pl-[5rem]">
@@ -212,8 +216,8 @@ const page = () => {
             Integrated Marketing, Design and Development
           </h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
+            Marketing, design, and development in one place. We create stunning
+            online solutions for your brand. Contact us today and get started.
           </p>
         </div>
         <div className="mt-8">
@@ -246,14 +250,8 @@ let hero: {
 
 hero = [
   {
-    text: " Marketing That Drive Business.",
+    text: "Marketing That Drive Business.",
     heading: "Get your own marketing team for you business",
-    description: ` Swop’s Flat Rectangle NFC’s are designed to be durable and simple
-    to use. The Flat is great to put under any phone case(non-metal)
-    Users can download our app to program any of our NFC’s with the
-    click of a button. This will attach your profile to the NFC for
-    easy sharing. You just tap the NFC on any compatible phone to
-    share your digital business card, microsite, crypto address, the
-    possibilities are endless. Use the swop app to.`,
+    description: `Are you ready to bring in a well-rounded marketing team to help your company expand? Bayshore Communication is here!! Choose Bayshore to gain access to our innovative technology platform and our skilled digital marketing experts. With the help of our service, you can build your own marketing team to manage all aspects of your company's expansion and goal-setting. Don't pass up the chance to increase your brand's visibility and outperform your competition.`,
   },
 ];

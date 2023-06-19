@@ -13,7 +13,7 @@ let hero: {
 hero = [
   {
     heading: "Inspiring Case Studies of Business Growth",
-    description: `Swop’s Flat Rectangle NFC’s are designed to be durable and simple to use. The Flat is great to put under any phone case(non-metal) Users can download our app to program any of our NFC’s with the click of a button. This will attach your profile to the NFC for easy sharing. You just tap the NFC on any compatible phone to share your digital business card, microsite, crypto address, the possibilities are endless. Use the swop app to.`,
+    description: `If you are looking for some inspiration and motivation to expand your company, you will find it in our case studies. We have collected the most amazing stories of our client's business growth from different industries and niches. You will learn how they faced obstacles, seized opportunities, and applied our creative solutions. Our case analyses will show you how you can achieve it with help of Bayshore services. `,
   },
 ];
 
@@ -80,7 +80,7 @@ const page = () => {
       <SectionLayout bg="">
         <SectionHeader
           heading="Featured case studies"
-          text="By being available to our clients, we can respond to their concerns and questions and carry out our duty for keeping our clients up-to-date about the case."
+          text="Be inspired by our clients’ success stories. Learn how they used our solutions to grow their businesses. You can do it too."
         />
 
         <div className="mt-8">

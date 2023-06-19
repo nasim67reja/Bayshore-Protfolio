@@ -2,6 +2,7 @@ import React from "react";
 import SectionLayout from "./SectionLayout";
 import { AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 interface resultInfo {
   heading: string;
@@ -14,8 +15,9 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
         <div className="max-w-[690px] mx-auto">
           <h2 className="heading-secondary text-center">{heading}</h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Swop’s Flat Rectangle NFC’s are designed to be durable and simple to
-            use. The Flat is great to put under any phone case(non-metal) Use.
+            We have some amazing results to show you. Our clients are delighted
+            with our services and their outcomes. Click below to view our most
+            amazing experience with our clients.
           </p>
         </div>
         <button
@@ -28,6 +30,7 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
           </span>
         </button>
       </div>
+
       <div className="mt-8">
         <Image
           src="/assets/results.svg"

@@ -12,7 +12,7 @@ let hero: {
 hero = [
   {
     heading: "Blogs: Expert Tips and Strategies from Our Agency",
-    description: `Swop’s Flat Rectangle NFC’s are designed to be durable and simple to use. The Flat is great to put under any phone case(non-metal) Users can download our app to program any of our NFC’s with the click of a button. This will attach your profile to the NFC for easy sharing. You just tap the NFC on any compatible phone to share your digital business card, microsite, crypto address, the possibilities are endless. Use the swop app to.`,
+    description: `You've chosen the best place to learn more about web marketing and how to develop your online presence. Our blog features insightful articles from our team of experts, covering topics such as SEO, social media, content marketing, web design, and more. You'll discover useful tactics and tips that you may use in your own business. By reading our blog, you may keep up with the most recent trends and best practices in the digital world.`,
   },
 ];
 
@@ -135,9 +135,9 @@ const page = () => {
             The Digital Marketer's Playbook: Insights, Ideas, and Inspiration
           </h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            By being available to our clients, we can respond to their concerns
-            and questions and carry out our duty for keeping our clients
-            up-to-date about the case.
+            Get valuable tips and tricks from our skilled digital marketing
+            teams. Boost your online performance and reach your goals with our
+            insights, ideas, and inspirations.
           </p>
         </div>
         <div className="mt-8">

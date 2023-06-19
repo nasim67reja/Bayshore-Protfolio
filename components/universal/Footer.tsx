@@ -1,6 +1,7 @@
 import React from "react";
 import SectionLayout from "./SectionLayout";
 import Image from "next/image";
+import Link from "next/link";
 
 const service: string[] = [
   "Website Design",
@@ -11,27 +12,34 @@ const service: string[] = [
   "Content Writing",
   "Video Production",
 ];
-const quickLinks: string[] = [
-  "Appointment ",
-  "Career",
-  "Refer Client",
-  "FAQs",
-  "Industries We Serve",
-  "Privacy Policy ",
-  "Trams & Conditions",
+
+let quickLinks: {
+  title: string;
+  link: string;
+}[];
+
+quickLinks = [
+  { title: "Appointment", link: "/" },
+  { title: "Career", link: "/career" },
+  { title: "Refer Client", link: "/refer-client" },
+  { title: "FAQs", link: "/faq" },
+  { title: "Industries We Serve", link: "/industries-we-serve" },
+  { title: "Privacy Policy", link: "/privacy-policy" },
+  { title: "Terms & Conditions", link: "/terms-conditions" },
 ];
-interface colProps {
-  text: string;
-  links: string[];
-}
-const Col = ({ text, links }: colProps) => {
+
+const Col = ({ text, links }: any) => {
   return (
     <div className="flex-1 md:translate-x-[20%] lg:translate-x-[30%]">
       <h4 className="mb-10 heading-four ">{text}</h4>
       <ul className="flex flex-col gap-2">
-        {links.map((el: string, i: number) => (
+        {links.map((el: any, i: number) => (
           <li className="text-link" key={i}>
-            {el}
+            {typeof el === "string" ? (
+              <>{el}</>
+            ) : (
+              <Link href={`${el.link}`}>{el.title}</Link>
+            )}
           </li>
         ))}
       </ul>

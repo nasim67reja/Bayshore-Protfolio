@@ -5,16 +5,6 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
 
-const links: string[] = [
-  "Home",
-  "About",
-  "Service",
-  "Growth Plan",
-  "Case Studies",
-  "Blog",
-  "Contact",
-];
-
 let linksO: {
   title: string;
   link: string;
