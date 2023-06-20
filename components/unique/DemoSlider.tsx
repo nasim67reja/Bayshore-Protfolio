@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
-interface Settings {
+interface Settings3 {
   focusOnSelect: boolean;
   infinite: boolean;
   slidesToShow: number;
@@ -18,6 +18,30 @@ interface Settings {
   fade: boolean;
   swipe: boolean;
   draggable: boolean;
+}
+
+interface Settings2 {
+  infinite: boolean;
+  slidesToShow: number;
+  slidesToScroll: number;
+  speed: number;
+  centerMode: boolean;
+  centerPadding: string;
+  arrows: boolean;
+  swipe: boolean;
+  draggable: boolean;
+  focusOnSelect: boolean;
+}
+
+interface Settings {
+  focusOnSelect: boolean;
+  infinite: boolean;
+  slidesToShow: number;
+  slidesToScroll: number;
+  speed: number;
+  centerMode: boolean;
+  centerPadding: string;
+  arrows: boolean;
 }
 
 const FocusOnSelect: React.FC = () => {
@@ -35,7 +59,8 @@ const FocusOnSelect: React.FC = () => {
     centerPadding: "0px",
     arrows: true,
   };
-  const settings2: Settings = {
+
+  const settings2: Settings2 = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -48,7 +73,7 @@ const FocusOnSelect: React.FC = () => {
     focusOnSelect: false,
   };
 
-  const settings3: Settings = {
+  const settings3: Settings3 = {
     focusOnSelect: true,
     infinite: true,
     slidesToShow: 1,
@@ -62,9 +87,13 @@ const FocusOnSelect: React.FC = () => {
     draggable: false,
   };
 
-  const [nav1, setNav1] = useState<Slider | null>(null);
-  const [nav2, setNav2] = useState<Slider | null>(null);
-  const [nav3, setNav3] = useState<Slider | null>(null);
+  // const [nav1, setNav1] = useState<Slider | null>(null);
+  // const [nav2, setNav2] = useState<Slider | null>(null);
+  // const [nav3, setNav3] = useState<Slider | null>(null);
+
+  const [nav1, setNav1] = useState<Slider | undefined>(undefined);
+  const [nav2, setNav2] = useState<Slider | undefined>(undefined);
+  const [nav3, setNav3] = useState<Slider | undefined>(undefined);
 
   return (
     <>
@@ -112,7 +141,12 @@ const FocusOnSelect: React.FC = () => {
         </Slider>
       </div>
       <div className="testimonial-slider max-w-[470px] mx-auto ">
-        <Slider {...settings} asNavFor={nav1} ref={(slider) => setNav3(slider)}>
+        <Slider
+          {...settings}
+          asNavFor={nav1}
+          ref={(slider: Slider | any) => setNav3(slider)}
+        >
+          {/* <Slider {...settings} asNavFor={nav1} ref={(slider) => setNav3(slider)}> */}
           <div className="">
             <Image
               alt="test"
