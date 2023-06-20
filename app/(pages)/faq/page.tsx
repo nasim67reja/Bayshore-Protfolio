@@ -77,8 +77,9 @@ function Example() {
     <Fragment>
       {[1, 2, 3, 4].map((el: number, i: number) => (
         <Accordion
+          key={el}
           open={open === i + 1}
-          icon={<Icon id={1 + i} open={open} key={i} />}
+          icon={<Icon id={1 + i} open={open} />}
         >
           <div className="px-8  border-t-[0.5px] border-[#AAAAAA] ">
             <AccordionHeader onClick={() => handleOpen(i + 1)}>
@@ -91,11 +92,11 @@ function Example() {
             <AccordionBody>
               <div className=" bg-[#F5F5F5] border-t-[0.5px] border-[#AAAAAA] rounded-b-[10px]">
                 <div className="px-8 !py-8 text-base">
-                  No! The other person does not need a SWOP or app to receive
-                  your SWOP profile. That's the beauty of SWOP ⚡️ If their
-                  phone is on this list of compatible devices you can pop to
-                  their phone. If it is not, just use your SWOP QR code on your
-                  profile to share!
+                  {`   No! The other person does not need a SWOP or app to receive
+your SWOP profile. That's the beauty of SWOP ⚡️ If their
+phone is on this list of compatible devices you can pop to
+their phone. If it is not, just use your SWOP QR code on your
+profile to share!`}
                 </div>
               </div>
             </AccordionBody>

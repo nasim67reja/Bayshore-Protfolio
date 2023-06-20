@@ -21,13 +21,14 @@ const tabs: Tab[] = [
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
             <h3 className="heading-tertiary">Domain Specific Talents </h3>
             <p className="text-base">
-              Bayshore's expert teams can create engaging and responsive
-              websites and apps, design stunning and visually appealing
-              graphics, produce expert and captivating videos, create compelling
-              and pertinent content, and optimize your site for search engines
-              and revenues. They can also use influential and real voices to
-              advance your brand. With the help of Bayshore, You may grow your
-              company and accomplish your digital marketing objectives.
+              {`   Bayshore's expert teams can create engaging and responsive
+                websites and apps, design stunning and visually appealing
+                graphics, produce expert and captivating videos, create compelling
+                and pertinent content, and optimize your site for search engines
+                and revenues. They can also use influential and real voices to
+                advance your brand. With the help of Bayshore, You may grow your
+                company and accomplish your digital marketing objectives.
+                `}
             </p>
           </div>
           <div className="flex-1">

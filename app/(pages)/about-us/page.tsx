@@ -34,13 +34,13 @@ const page = () => {
         </p>
         <p className="text-base">
           {" "}
-          This diversified team brings a variety of knowledge and experience to
-          the table, with competence in digital marketing, social media
-          management, site building, SEO specialization, graphic design, content
-          writing, client handling, and paralegal support. Bayshore
-          Communication's remarkable communication abilities, combined with an
-          excellent understanding of the industry, enable them to generate
-          impressive outcomes and provide outstanding support to their clients.
+          {`  This diversified team brings a variety of knowledge and experience to
+the table, with competence in digital marketing, social media
+management, site building, SEO specialization, graphic design, content
+writing, client handling, and paralegal support. Bayshore
+Communication's remarkable communication abilities, combined with an
+excellent understanding of the industry, enable them to generate
+impressive outcomes and provide outstanding support to their clients.`}
         </p>
       </SectionLayout>
 

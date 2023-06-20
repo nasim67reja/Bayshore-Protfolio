@@ -56,7 +56,7 @@ const Blog = () => {
         <p className="text-small">June 7, 2023</p>
       </div>
       <h4 className="heading-four mt-[4.5rem]">
-        B2B SEO in 2023: What's New and How to Adapt Your Strategy for Success
+        {` B2B SEO in 2023: What's New and How to Adapt Your Strategy for Success`}
       </h4>
       <div>
         <h5 className="text-small !text-[#0077B3] mt-[3rem] mb-[2rem]">
@@ -132,7 +132,7 @@ const page = () => {
       <SectionLayout bg="">
         <div className="flex flex-col items-center">
           <h2 className="heading-secondary ">
-            The Digital Marketer's Playbook: Insights, Ideas, and Inspiration
+            {`  The Digital Marketer's Playbook: Insights, Ideas, and Inspiration`}
           </h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
             Get valuable tips and tricks from our skilled digital marketing

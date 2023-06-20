@@ -88,12 +88,14 @@ const page = () => {
             Package
           </h2>
           <p className="text-base !text-center  mb-10">
+            {`
             We are aware that there is no one size fits all approach to SEO. To
             create a unique SEO plan for your company, Bayishore team takes into
             account your firm's particular demands, industry, existing SEO
             performance, and goals in addition to their own in-depth
             investigation. Contact us right away if you're prepared to begin
             developing your unique, revenue-generating SEO approach.
+            `}
             <Link className="text-[#4C74B9] underline" href="/contact">
               {" "}
               contact us{" "}
