@@ -41,7 +41,7 @@ const Navbar = () => {
             {linksO.map((el: { title: string; link: string }, i: number) => (
               <li
                 className={`text-link ${
-                  pathname === el.link ? "active border-2 border-black" : ""
+                  pathname === el.link ? "active !text-primary" : ""
                 }`}
                 key={i}
               >

@@ -107,6 +107,9 @@ body {
 .text-cut-5 {
   -webkit-line-clamp: 5;
 }
+.text-cut-4 {
+  -webkit-line-clamp: 4;
+}
 
 /*  Home Logo Animation */
 
