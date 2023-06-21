@@ -1,6 +1,6 @@
-import MessengerChat from "@/components/universal/MessengerChatBot";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Facebook from "@/components/universal/MessengerChatBot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <MessengerChat />
+        <Facebook />
       </body>
     </html>
   );
