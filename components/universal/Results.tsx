@@ -32,13 +32,6 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
       </div>
 
       <div className="mt-8">
-        {/* <Image
-          src="/assets/results.svg"
-          alt="marketing"
-          width={1200}
-          height={1200}
-          className="w-full h-auto"
-        /> */}
         <ClientLogos />
       </div>
     </SectionLayout>
@@ -54,7 +47,7 @@ let logos: {
 
 const ClientLogos = () => {
   return (
-    <div className="grid grid-cols-5  gap-12 items-center">
+    <div className="grid grid-cols-5  gap-12 items-center gap-y-[8rem]">
       <Image
         src="/assets/client-logo/swop.svg"
         alt="swop"

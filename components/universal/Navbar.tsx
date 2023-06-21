@@ -27,14 +27,16 @@ const Navbar = () => {
     <header>
       <nav className="container flex justify-between items-center py-[1.8rem]">
         <div>
-          <Image
-            src="/assets/bayshore-logo.svg"
-            alt="bayshore-logo"
-            width={366}
-            height={106}
-            className="w-[166px] h-[36px]"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/assets/bayshore-logo.svg"
+              alt="bayshore-logo"
+              width={366}
+              height={106}
+              className="w-[166px] h-[36px]"
+              priority
+            />
+          </Link>
         </div>
         <div>
           <ul className="flex items-center justify-center gap-[2.6rem]">

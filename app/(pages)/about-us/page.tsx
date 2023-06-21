@@ -1,3 +1,4 @@
+import History from "@/components/unique/about/History";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
@@ -84,6 +85,7 @@ impressive outcomes and provide outstanding support to their clients.`}
           heading="Our History"
           text="By being available to our clients, we can respond to their concerns and questions and carry out our duty for keeping our clients up-to-date about the case."
         />
+        <History />
       </SectionLayout>
     </>
   );

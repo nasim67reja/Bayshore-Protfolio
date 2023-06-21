@@ -2,6 +2,8 @@ import React from "react";
 import SectionLayout from "./SectionLayout";
 import Image from "next/image";
 import Link from "next/link";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 
 const service: string[] = [
   "Website Design",
@@ -65,16 +67,23 @@ const Footer = () => {
           <Col text="Service" links={service} />
           <Col text="Quick links" links={quickLinks} />
 
-          <div className="flex-[1.2] flex flex-col items-center gap-6">
+          <div className="flex-[1.2] flex flex-col items-center  gap-6">
             <h4 className="mb-10 heading-four">
-              By subscribing we inform about
+              {/* By subscribing we inform about */}
+              Social links
             </h4>
-            <input
+            <div className="center gap-4">
+              <BsFacebook className="w-[28px] h-auto" />
+              <AiFillInstagram className="w-[34px] h-auto" />
+              <BsLinkedin className="w-[28px] h-auto" />
+              <AiFillTwitterCircle className="w-[34px] h-auto" />
+            </div>
+            {/* <input
               className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4 bg-[#EAEAEA]"
               type="text"
               placeholder="Enter your email"
             />
-            <button className="btn text-link">Get a Proposal</button>
+            <button className="btn text-link">Get a Proposal</button> */}
           </div>
         </div>
         <div>footer-bottom</div>

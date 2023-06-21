@@ -163,7 +163,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
       <SectionLayout bg="bg-[#F4F4F4]">
         <SectionHeader
           heading=" Benefits of Choosing Us as Your Digital Marketing Agency
-          </h2>"
+          "
           text="We offer creative solutions, data-driven strategies, and measurable results for your digital marketing needs. Choose us and grow your business online."
         />
         <div className="flex mt-12 gap-16 items-center">

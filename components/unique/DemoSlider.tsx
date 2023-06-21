@@ -97,7 +97,7 @@ const FocusOnSelect: React.FC = () => {
 
   return (
     <>
-      <div className="mt-[3rem] mb-[4rem]">
+      <div className="mt-[3rem] mb-[4rem] client-slider">
         <Slider
           asNavFor={nav1}
           ref={(slider: Slider) => setNav2(slider)}

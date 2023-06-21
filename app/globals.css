@@ -136,6 +136,7 @@ body {
 /*  complex slider section */
 
 /* slick slider */
+/* for client */
 .slick-list {
   padding: 0 25px !important;
 }
@@ -144,15 +145,9 @@ body {
   transform: scale(0.7);
   transition: all 0.6s;
 }
-
 .slick-current img {
   transform: scale(1);
 }
-.slick-prev,
-.slick-next {
-  /* background-color: red !important; */
-}
-
 .slick-prev:hover,
 .slick-next:hover {
   background-color: blue; /* Change this to your desired color */
@@ -205,6 +200,24 @@ body {
   }
 }
 
+/* slick slider our history */
+
+.centerHistory .slick-list img {
+  transform: scale(1);
+}
+.centerHistory .slick-list {
+  padding: 0rem !important;
+}
+
+.centerHistory .slick-arrow {
+  top: 65%;
+}
+.centerHistory .slick-prev {
+  left: -50px;
+}
+.centerHistory .slick-next {
+  right: -50px;
+}
 .overflow-hidden .py-4 {
   padding: 0 !important;
 }
