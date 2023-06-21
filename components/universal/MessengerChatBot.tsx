@@ -1,10 +1,21 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 const MessengerChat: React.FC = () => {
   return (
-    <Head>
-      <script
+    <>
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
+
+      <Script>
+        var chatbox = document.getElementById("fb-customer-chat");
+        chatbox.setAttribute("page_id", "102729218222643");
+        chatbox.setAttribute("attribution", "biz_inbox");
+      </Script>
+
+      {/* Your SDK code  */}
+      <Script
         dangerouslySetInnerHTML={{
           __html: `
             window.fbAsyncInit = function () {
@@ -25,7 +36,7 @@ const MessengerChat: React.FC = () => {
           `,
         }}
       />
-    </Head>
+    </>
   );
 };
 
