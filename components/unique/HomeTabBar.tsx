@@ -6,6 +6,7 @@ interface Tab {
   label: ReactNode;
   content: ReactNode;
   link: string;
+  activeLink: string;
 }
 
 const tabs: Tab[] = [
@@ -43,7 +44,8 @@ const tabs: Tab[] = [
         </div>
       </>
     ),
-    link: "/assets/explore.svg",
+    link: "/assets/expertise.svg",
+    activeLink: "/assets/expertise-active.svg",
   },
   {
     label: "Focus on Results",
@@ -51,13 +53,17 @@ const tabs: Tab[] = [
       <>
         <div className="flex  gap-8">
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
-            <h3 className="heading-tertiary">Domain Specific Talents 2</h3>
+            <h3 className="heading-tertiary">Only Numbers Speaks</h3>
             <p className="text-base">
-              Swop’s Flat Rectangle NFC’s are designed to be durable and simple
-              to use. The Flat is great to put under any phone case(non-metal)
-              Users can download our app to program any of our NFC’s with the
-              click of a button. This will attach your profile to the NFC for
-              easy sharing.
+              Bayshore prioritizes measurable outcomes. The outcomes we achieve
+              from our clients' ensure success. To evaluate the efficacy, we use
+              statistics and key performance indicators. We offer insightful
+              data by measuring conversions, traffic, and other analytics. Our
+              team analyzes data, identifies patterns, and makes wise judgments
+              for better marketing success. Transparency and regular updates
+              guarantee you see progress. With Bayshore, experience the power of
+              data-driven digital marketing and let the numbers speak for
+              themselves.
             </p>
           </div>
           <div className="flex-1">
@@ -72,7 +78,8 @@ const tabs: Tab[] = [
         </div>
       </>
     ),
-    link: "/assets/explore.svg",
+    link: "/assets/result.svg",
+    activeLink: "/assets/result-active.svg",
   },
   {
     label: (
@@ -84,12 +91,17 @@ const tabs: Tab[] = [
       <>
         <div className="flex  gap-8">
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
-            <h3 className="heading-tertiary">Domain Specific Talents 3</h3>
+            <h3 className="heading-tertiary">Industry's Best Tools</h3>
             <p className="text-base">
-              Swop’s Flat Rectangle NFC’s are designed to be durable and simple
-              to use. The Flat is great to put under any phone case(non-metal)
-              Users can download our app to program any of our NFC’s with the
-              click of a button. easy sharing. You just tap the NFC on any.
+              Our Bayshore team develops and manages your digital marketing
+              strategies using the most leading-edge and potent techniques and
+              technologies. In order to design, develop, track performance, and
+              enhance your footprint in the digital world, we use powerful
+              analytics tools, marketing automation software, other management
+              tools, and platforms. This allows us to stay ahead of the curve.
+              With our assistance, you may make use of our access to
+              cutting-edge equipment and technology, giving you a competitive
+              advantage.
             </p>
           </div>
           <div className="flex-1">
@@ -104,7 +116,8 @@ const tabs: Tab[] = [
         </div>
       </>
     ),
-    link: "/assets/explore.svg",
+    link: "/assets/tools.svg",
+    activeLink: "/assets/tools-active.svg",
   },
   {
     label: "Time and Cost Efficiency",
@@ -112,13 +125,17 @@ const tabs: Tab[] = [
       <>
         <div className="flex  gap-8">
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
-            <h3 className="heading-tertiary">Domain Specific Talents 4</h3>
+            <h3 className="heading-tertiary">Ignore AB Testing</h3>
             <p className="text-base">
-              Swop’s Flat Rectangle NFC’s are designed to be durable and simple
-              to use. The Flat is great to put under any phone Users can
-              download our app to program any of our NFC’s with the click of a
-              button. This will attach your profile to the NFC for easy sharing.
-              You just tap the NFC on any.
+              At Bayshore, we prioritize time and cost efficiency, and that's
+              why we go beyond traditional AB testing. We furnish our expertise
+              and data-directed insights to implement strategies that deliver
+              optimal results right from the start. Our experienced team applies
+              proven methodologies and industry best practices to save you
+              valuable time and resources. By avoiding lengthy and costly
+              processes like split or bucket testing, we focus on implementing
+              effective strategies that maximize your ROI and accelerate your
+              digital marketing success.
             </p>
           </div>
           <div className="flex-1">
@@ -133,7 +150,8 @@ const tabs: Tab[] = [
         </div>
       </>
     ),
-    link: "/assets/explore.svg",
+    link: "/assets/time.svg",
+    activeLink: "/assets/time-active.svg",
   },
 ];
 
@@ -152,7 +170,7 @@ export default function HomeTabBar() {
             onClick={() => setActiveTab(index)}
           >
             <Image
-              src={tab.link}
+              src={activeTab === index ? tab.activeLink : tab.link}
               alt="svg-logo"
               width={100}
               height={100}

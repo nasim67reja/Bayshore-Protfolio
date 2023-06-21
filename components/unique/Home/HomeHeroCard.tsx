@@ -6,11 +6,14 @@ import { BsArrowRight } from "react-icons/bs";
 interface hero {
   heading: string;
   stat: number;
+  bgImg: string;
 }
 
-const HomeHeroCard = ({ heading, stat }: hero) => {
+const HomeHeroCard = ({ heading, stat, bgImg }: hero) => {
   return (
-    <div className="flex-1 custom-shadow bg-heroimg-3 flex flex-col items-center py-[2rem] px-[2rem]">
+    <div
+      className={`flex-1 custom-shadow ${bgImg} bg-cover bg-center bg-no-repeat flex flex-col items-center py-[2rem] px-[2rem]`}
+    >
       <h4 className="heading-four mb-8 text-center text-cut-2">{heading}</h4>
       <p className=" heading-primary !text-primary !mb-4">
         +<Count num={stat} duration={3} />%

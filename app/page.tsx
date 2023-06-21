@@ -216,13 +216,18 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
           </p>
         </div>
         <div className="mt-8">
-          <Image
+          {/* <Image
             src="/assets/marketing.svg"
             alt="marketing"
             width={1200}
             height={1200}
             className="w-full h-auto"
-          />
+          /> */}
+          <div className="grid grid-cols-4 gap-[8rem] ">
+            {links.map((el: any, i: number) => (
+              <LogosM el={el} key={i} />
+            ))}
+          </div>
         </div>
       </SectionLayout>
       {/* about us */}
@@ -250,3 +255,74 @@ hero = [
     description: `Are you ready to bring in a well-rounded marketing team to help your company expand? Bayshore Communication is here!! Choose Bayshore to gain access to our innovative technology platform and our skilled digital marketing experts. With the help of our service, you can build your own marketing team to manage all aspects of your company's expansion and goal-setting. Don't pass up the chance to increase your brand's visibility and outperform your competition.`,
   },
 ];
+
+let links: {
+  link: string;
+  alt: string;
+  text: string;
+}[];
+
+links = [
+  {
+    link: "/assets/icons-for-web/analyze-and-Measure-Results.png",
+    alt: "analyze-and-Measure-Results",
+    text: "Analyze and Measure Results",
+  },
+  {
+    link: "/assets/icons-for-web/conversion-optimization.png",
+    alt: "conversion-optimization",
+    text: "Conversion Optimization",
+  },
+
+  {
+    link: "/assets/icons-for-web/Define.png",
+    alt: "Define",
+    text: "Define",
+  },
+
+  {
+    link: "/assets/icons-for-web/engage.png",
+    alt: "engage",
+    text: "Engage",
+  },
+
+  {
+    link: "/assets/icons-for-web/seo-sem.png",
+    alt: "seo-sem",
+    text: "Seo and Sem",
+  },
+
+  {
+    link: "/assets/icons-for-web/strategy.png",
+    alt: "strategy",
+    text: "Strategy",
+  },
+
+  {
+    link: "/assets/icons-for-web/target-audience.png",
+    alt: "target-audience",
+    text: "Target Audience",
+  },
+  {
+    link: "/assets/icons-for-web/ui-ux.png",
+    alt: "ui-ux",
+    text: "UI UX",
+  },
+];
+
+const LogosM = ({ el }: any) => {
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="px-[5.5rem]">
+        <Image
+          src={el.link}
+          alt={el.alt}
+          width={600}
+          height={600}
+          className="w-full h-auto"
+        />
+      </div>
+      <h4 className="heading-four text-center">{el.text}</h4>
+    </div>
+  );
+};

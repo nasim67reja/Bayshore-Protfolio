@@ -82,13 +82,16 @@ body {
   background-color: #241836; /* Replace with your desired color */
 }
 
-.bg-heroimg-3 {
-  background-image: url("/assets/hero-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.bg-heroimg-1 {
+  background-image: url("/assets/buisness-growth.png");
 }
 
+.bg-heroimg-2 {
+  background-image: url("/assets/website-increase.png");
+}
+.bg-heroimg-3 {
+  background-image: url("/assets/social-media.png");
+}
 .text-cut-2 {
   text-overflow: ellipsis;
   word-wrap: break-word;

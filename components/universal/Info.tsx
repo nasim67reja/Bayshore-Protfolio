@@ -9,11 +9,11 @@ const Info = () => {
         <div className="flex justify-between items-center">
           <div className="center gap-8">
             <Image
-              src="/assets/salman.png"
+              src="/assets/salman-n.png"
               alt="salman"
               width={150}
               height={150}
-              className="w-[110px] h-[110px]"
+              className="w-[110px] h-[110px] rounded-full border-[5px] border-[#fff]"
             />
             <div>
               <p className="text-base mb-2 opacity-80 !text-[#fff]">

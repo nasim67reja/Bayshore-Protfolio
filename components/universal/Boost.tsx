@@ -28,13 +28,26 @@ const Boost: React.FC<boostInfo> = ({ heading, btnText }) => {
         </button>
       </form>
       <div className="mt-20 flex gap-12">
-        <HomeHeroCard heading="Business Growth Increased By" stat={87} />
-        <HomeHeroCard heading="Website Engagement Increased By" stat={71} />
         <HomeHeroCard
+          bgImg="bg-heroimg-1"
+          heading="Business Growth Increased By"
+          stat={87}
+        />
+        <HomeHeroCard
+          bgImg="bg-heroimg-2"
+          heading="Website Engagement Increased By"
+          stat={71}
+        />
+        <HomeHeroCard
+          bgImg="bg-heroimg-3"
           heading="Social Media Engagement Increased By"
           stat={60}
         />
-        <HomeHeroCard heading="Business Growth Increased By" stat={87} />
+        <HomeHeroCard
+          bgImg="bg-heroimg-1"
+          heading="Business Growth Increased By"
+          stat={87}
+        />
       </div>
     </SectionLayout>
   );

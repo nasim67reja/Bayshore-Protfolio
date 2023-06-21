@@ -66,7 +66,7 @@ const page = () => {
           />
           <div className="flex-1">
             <Image
-              src="/assets/demo.svg"
+              src="/assets/case-studies/case-studies.png"
               alt="marketing"
               width={800}
               height={800}
