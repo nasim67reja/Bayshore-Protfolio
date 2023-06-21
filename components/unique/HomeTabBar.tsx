@@ -55,15 +55,17 @@ const tabs: Tab[] = [
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
             <h3 className="heading-tertiary">Only Numbers Speaks</h3>
             <p className="text-base">
-              Bayshore prioritizes measurable outcomes. The outcomes we achieve
-              from our clients' ensure success. To evaluate the efficacy, we use
-              statistics and key performance indicators. We offer insightful
-              data by measuring conversions, traffic, and other analytics. Our
-              team analyzes data, identifies patterns, and makes wise judgments
-              for better marketing success. Transparency and regular updates
-              guarantee you see progress. With Bayshore, experience the power of
-              data-driven digital marketing and let the numbers speak for
-              themselves.
+              {`
+               Bayshore prioritizes measurable outcomes. The outcomes we achieve
+               from our clients' ensure success. To evaluate the efficacy, we use
+               statistics and key performance indicators. We offer insightful
+               data by measuring conversions, traffic, and other analytics. Our
+               team analyzes data, identifies patterns, and makes wise judgments
+               for better marketing success. Transparency and regular updates
+               guarantee you see progress. With Bayshore, experience the power of
+               data-driven digital marketing and let the numbers speak for
+               themselves.
+              `}
             </p>
           </div>
           <div className="flex-1">
@@ -91,17 +93,20 @@ const tabs: Tab[] = [
       <>
         <div className="flex  gap-8">
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
-            <h3 className="heading-tertiary">Industry's Best Tools</h3>
+            <h3 className="heading-tertiary">{`Industry's Best Tools`}</h3>
             <p className="text-base">
-              Our Bayshore team develops and manages your digital marketing
-              strategies using the most leading-edge and potent techniques and
-              technologies. In order to design, develop, track performance, and
-              enhance your footprint in the digital world, we use powerful
-              analytics tools, marketing automation software, other management
-              tools, and platforms. This allows us to stay ahead of the curve.
-              With our assistance, you may make use of our access to
-              cutting-edge equipment and technology, giving you a competitive
-              advantage.
+              {`
+                Our Bayshore team develops and manages your digital marketing
+                strategies using the most leading-edge and potent techniques and
+                technologies. In order to design, develop, track performance, and
+                enhance your footprint in the digital world, we use powerful
+                analytics tools, marketing automation software, other management
+                tools, and platforms. This allows us to stay ahead of the curve.
+                With our assistance, you may make use of our access to
+                cutting-edge equipment and technology, giving you a competitive
+                advantage.
+                
+                `}
             </p>
           </div>
           <div className="flex-1">
@@ -127,15 +132,17 @@ const tabs: Tab[] = [
           <div className="flex-1  rounded-[10px] custom-shadow p-16">
             <h3 className="heading-tertiary">Ignore AB Testing</h3>
             <p className="text-base">
-              At Bayshore, we prioritize time and cost efficiency, and that's
-              why we go beyond traditional AB testing. We furnish our expertise
-              and data-directed insights to implement strategies that deliver
-              optimal results right from the start. Our experienced team applies
-              proven methodologies and industry best practices to save you
-              valuable time and resources. By avoiding lengthy and costly
-              processes like split or bucket testing, we focus on implementing
-              effective strategies that maximize your ROI and accelerate your
-              digital marketing success.
+              {`
+                At Bayshore, we prioritize time and cost efficiency, and that's
+                why we go beyond traditional AB testing. We furnish our expertise
+                and data-directed insights to implement strategies that deliver
+                optimal results right from the start. Our experienced team applies
+                proven methodologies and industry best practices to save you
+                valuable time and resources. By avoiding lengthy and costly
+                processes like split or bucket testing, we focus on implementing
+                effective strategies that maximize your ROI and accelerate your
+                digital marketing success.
+                `}
             </p>
           </div>
           <div className="flex-1">
