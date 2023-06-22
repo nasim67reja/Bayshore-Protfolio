@@ -1,59 +1,20 @@
-"use client";
+// "use client";
 
 import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import React from "react";
-import GoogleMapReact from "google-map-react";
-import Head from "next/head";
-interface con {
-  title: string;
-  icon: string;
-}
-const Row: React.FC<con> = ({ title, icon }) => {
-  return (
-    <div className="">
-      <h4 className="heading-four mb-2 flex items-center gap-4">
-        <span>
-          <Image
-            src={icon}
-            alt="contact-office"
-            width={600}
-            height={80}
-            className="w-[2rem] h-auto object-cover"
-          />
-        </span>
-        <span>{title}</span>
-      </h4>
-      <p className="text-small">+1 (321) 765-9177</p>
-    </div>
-  );
-};
-interface col {
-  title: string;
-}
-const Adress = ({ title }: col) => {
-  return (
-    <div className="">
-      <h3 className="heading-tertiary">{title}</h3>
-      <div className="flex flex-col gap-3">
-        <Row title="Phone" icon="/assets/phone.svg" />
-        <Row title="Address" icon="/assets/location.svg" />
-        <Row title="Email" icon="/assets/email.svg" />
-      </div>
-    </div>
-  );
+import { Metadata } from "next";
+import SimpleMap from "@/components/unique/contact/Map";
+
+export const metadata: Metadata = {
+  title: "Contact-Bayshore Communication",
+  description:
+    "Are you concerned about your business growth? Bayshore's here to help. Contact us today and get a free consultation. Let us show you how we can make a difference for your business.",
 };
 
 const page = () => {
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Are you concerned about your business growth? Bayshore's here to help. Contact us today and get a free consultation. Let us show you how we can make a difference for your business."
-          key="desc"
-        />
-      </Head>
       <Image
         src="/assets/contact.png"
         alt="contact-office"
@@ -78,7 +39,8 @@ const page = () => {
         </div>
       </SectionLayout>
       <SectionLayout bg="">
-        <SimpleMap />
+        {" "}
+        <SimpleMap />{" "}
       </SectionLayout>
     </>
   );
@@ -119,38 +81,41 @@ const Form = () => {
   );
 };
 
-interface IProps {
-  lat: number;
-  lng: number;
-  text: string;
+interface con {
+  title: string;
+  icon: string;
 }
-
-const AnyReactComponent: React.FC<IProps> = ({ text }) => <div>{text}</div>;
-
-interface ICenter {
-  lat: number;
-  lng: number;
-}
-
-const SimpleMap: React.FC = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
-
+const Row: React.FC<con> = ({ title, icon }) => {
   return (
-    // Important! Always set the container height explicitly
-    <div style={{ height: "100vh", width: "100%" }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDaERPmsWGDCk2MrKXsqkMfPkSu614Simk" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
-      </GoogleMapReact>
+    <div className="">
+      <h4 className="heading-four mb-2 flex items-center gap-4">
+        <span>
+          <Image
+            src={icon}
+            alt="contact-office"
+            width={600}
+            height={80}
+            className="w-[2rem] h-auto object-cover"
+          />
+        </span>
+        <span>{title}</span>
+      </h4>
+      <p className="text-small">+1 (321) 765-9177</p>
+    </div>
+  );
+};
+interface col {
+  title: string;
+}
+const Adress = ({ title }: col) => {
+  return (
+    <div className="">
+      <h3 className="heading-tertiary">{title}</h3>
+      <div className="flex flex-col gap-3">
+        <Row title="Phone" icon="/assets/phone.svg" />
+        <Row title="Address" icon="/assets/location.svg" />
+        <Row title="Email" icon="/assets/email.svg" />
+      </div>
     </div>
   );
 };

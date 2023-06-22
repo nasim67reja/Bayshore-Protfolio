@@ -31,7 +31,7 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
         </button>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-16">
         <ClientLogos />
       </div>
     </SectionLayout>
@@ -47,7 +47,7 @@ let logos: {
 
 const ClientLogos = () => {
   return (
-    <div className="grid grid-cols-5  gap-12 items-center gap-y-[8rem]">
+    <div className="grid grid-cols-5 justify-center gap-12 items-center gap-y-[8rem]">
       <Image
         src="/assets/client-logo/swop.svg"
         alt="swop"

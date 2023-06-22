@@ -1,6 +1,7 @@
 import History from "@/components/unique/about/History";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
+import { Metadata } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -9,16 +10,15 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
 
+export const metadata: Metadata = {
+  title: "About-Bayshore Communication",
+  description:
+    "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore.",
+};
+
 const page = () => {
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore."
-          key="desc"
-        />
-      </Head>
       <div className="relative">
         {/* <div className="absolute w-32 h-32 rounded-full top-[18%] left-[38%] bg-primary"></div> */}
         <Image

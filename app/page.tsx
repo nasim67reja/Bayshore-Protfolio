@@ -11,51 +11,21 @@ import Navbar from "@/components/universal/Navbar";
 import Results from "@/components/universal/Results";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
-import Head from "next/head";
+import { Metadata } from "next";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
 
-const Box1: any = [
-  "SEO Services",
-  "Ecommerce SEO Services",
-  "Local SEO Services",
-  "Content Marketing Services",
-];
-
-const Box2: any = [
-  "PPC Management Services",
-  "Social Advertising Services",
-  "Programmatic Advertising Services",
-  "Geofencing Advertising Services",
-];
-
-const Box3: any = [
-  "MarketingCloudFX",
-  "Nutshell",
-  "Website Call Tracking",
-  "Lead Management",
-];
-
-const Box4: any = [
-  "Website Design Services",
-  "CRO Services",
-  "Landing Page Design Services",
-  "Social Media Management Services",
-];
-
+export const metadata: Metadata = {
+  title: "Bayshore Communication",
+  description:
+    "Welcome to Bayshore Communication!! Grow your brand or business with us. Whether you need digital marketing services, or software solutions, we've you covered.",
+};
 const page = () => {
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Welcome to Bayshore Communication!! Grow your brand or business with us. Whether you need digital marketing services, or software solutions, we've you covered."
-          key="desc"
-        />
-      </Head>
       <Navbar />
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
+        <div className="flex justify-between items-center gap-12 mt-[72px]">
           <div className="flex-1">
             <p className="text-[16px] md:text-[20px] text-[#3E7BE2] mb-[2.5rem]">
               {hero[0].text}
@@ -248,6 +218,34 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
 };
 
 export default page;
+
+const Box1: any = [
+  "SEO Services",
+  "Ecommerce SEO Services",
+  "Local SEO Services",
+  "Content Marketing Services",
+];
+
+const Box2: any = [
+  "PPC Management Services",
+  "Social Advertising Services",
+  "Programmatic Advertising Services",
+  "Geofencing Advertising Services",
+];
+
+const Box3: any = [
+  "MarketingCloudFX",
+  "Nutshell",
+  "Website Call Tracking",
+  "Lead Management",
+];
+
+const Box4: any = [
+  "Website Design Services",
+  "CRO Services",
+  "Landing Page Design Services",
+  "Social Media Management Services",
+];
 
 //  Home Hero section
 let hero: {

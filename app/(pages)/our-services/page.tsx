@@ -4,6 +4,7 @@ import HeroLeft from "@/components/universal/HeroLeft";
 import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
 import SectionLayout from "@/components/universal/SectionLayout";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 import { AiOutlineRight } from "react-icons/ai";
@@ -24,6 +25,12 @@ hero = [
     help you expand your company globally and accomplish your goals.`,
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Service-Bayshore Communication",
+  description:
+    "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore. ",
+};
 
 const page = () => {
   return (
@@ -65,7 +72,7 @@ const page = () => {
 
 export default page;
 
-let services: {
+export let services: {
   logo: string;
   title: string;
   description: string;

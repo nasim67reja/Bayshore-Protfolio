@@ -168,13 +168,6 @@ const HomeLogoLoop = () => {
               className="w-[6rem] h-auto"
             />
             <Image
-              src="/assets/logo/ppro.svg"
-              alt="ppro"
-              width={200}
-              height={200}
-              className="w-[6rem] h-auto"
-            />
-            <Image
               src="/assets/logo/laravel.svg"
               alt="laravel"
               width={200}
@@ -187,6 +180,13 @@ const HomeLogoLoop = () => {
               width={200}
               height={200}
               className="w-[10rem] h-auto"
+            />
+            <Image
+              src="/assets/logo/ppro.svg"
+              alt="ppro"
+              width={200}
+              height={200}
+              className="w-[6rem] h-auto"
             />
             <Image
               src="/assets/logo/node-js.svg"

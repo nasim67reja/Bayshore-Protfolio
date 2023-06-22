@@ -2,6 +2,7 @@ import React from "react";
 import SectionLayout from "./SectionLayout";
 import { AiOutlineRight } from "react-icons/ai";
 import HomeHeroCard from "../unique/Home/HomeHeroCard";
+import Image from "next/image";
 
 interface boostInfo {
   heading: string;
@@ -43,11 +44,29 @@ const Boost: React.FC<boostInfo> = ({ heading, btnText }) => {
           heading="Social Media Engagement Increased By"
           stat={60}
         />
-        <HomeHeroCard
+        {/* <HomeHeroCard
           bgImg="bg-heroimg-1"
           heading="Business Growth Increased By"
           stat={87}
-        />
+        /> */}
+        <div className="flex-1 custom-shadow p-[3rem]">
+          <p className="text-base pr-12 !text-start">
+            “We measure our success by how much we WOW our clients.”
+          </p>
+          <div className="flex mt-8 gap-6">
+            <Image
+              src="/assets/salman-n.png"
+              alt="salman"
+              width={150}
+              height={150}
+              className="w-[53px] h-[53px] rounded-full border-[2px] border-[#207DE9]"
+            />
+            <div>
+              <h4 className="heading-four">BILL CRAIG</h4>
+              <p className="text-small">WebFX President</p>
+            </div>
+          </div>
+        </div>
       </div>
     </SectionLayout>
   );

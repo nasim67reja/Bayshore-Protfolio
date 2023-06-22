@@ -5,35 +5,21 @@ import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
 import Results from "@/components/universal/Results";
 import SectionLayout from "@/components/universal/SectionLayout";
+import { Metadata } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-let hero: {
-  heading: string;
-  description: string;
-}[];
-
-hero = [
-  {
-    heading: "Experience Rapid Growth with our Enhanced Marketing ",
-    description: `Do you wish to benefit from the most recent marketing techniques and resources? If so, 
-    you require one of our upgraded marketing bundles. We provide a broad spectrum of services that can expand your brand and boost sales. From the website, or software solutions to digital marketing services, we have a bundle that suits  your needs and 
-    budget. Don’t let this chance slip away to skyrocket your business with our enhanced advertising packages.`,
-  },
-];
+export const metadata: Metadata = {
+  title: "Growth-Bayshore Communication",
+  description:
+    "Do you want to take your company to the next stage? Increase conversions, or boost brand awareness? Join Bayshore and experience rapid growth with best marketing bundles.",
+};
 
 const page = () => {
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Do you want to take your company to the next stage? Increase conversions, or boost brand awareness? Join Bayshore and experience rapid growth with best marketing bundles."
-          key="desc"
-        />
-      </Head>
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">
           <HeroLeft
@@ -135,6 +121,20 @@ we have some amazing results"
 };
 
 export default page;
+
+let hero: {
+  heading: string;
+  description: string;
+}[];
+
+hero = [
+  {
+    heading: "Experience Rapid Growth with our Enhanced Marketing ",
+    description: `Do you wish to benefit from the most recent marketing techniques and resources? If so, 
+    you require one of our upgraded marketing bundles. We provide a broad spectrum of services that can expand your brand and boost sales. From the website, or software solutions to digital marketing services, we have a bundle that suits  your needs and 
+    budget. Don’t let this chance slip away to skyrocket your business with our enhanced advertising packages.`,
+  },
+];
 
 const PackageBulletPoint = () => {
   return (

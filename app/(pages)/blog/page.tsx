@@ -1,6 +1,7 @@
 import Consultaion from "@/components/universal/Consultaion";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionLayout from "@/components/universal/SectionLayout";
+import { Metadata } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -17,19 +18,75 @@ hero = [
   },
 ];
 
-// let blogs: {
-//   bgImg:string;
-//   img:string;
-//   heading: string;
-//   description: string;
-// }[];
+export const metadata: Metadata = {
+  title: "Blog-Bayshore Communication",
+  description:
+    "Learn communication tips from our Bayshore experts. Read our blogs on web-mobile app design, content writing, social media marketing, video production, and more.",
+};
 
-// blogs = [
-//   {
-//     heading: "Blogs: Expert Tips and Strategies from Our Agency",
-//     description: `Swop’s Flat Rectangle NFC’s are designed to be durable and simple to use. The Flat is great to put under any phone case(non-metal) Users can download our app to program any of our NFC’s with the click of a button. This will attach your profile to the NFC for easy sharing. You just tap the NFC on any compatible phone to share your digital business card, microsite, crypto address, the possibilities are endless. Use the swop app to.`,
-//   },
-// ];
+const page = () => {
+  return (
+    <>
+      <SectionLayout bg="bg-[#F4F4F4]">
+        <div className="flex justify-between items-center gap-12">
+          <HeroLeft
+            heading={hero[0].heading}
+            description={hero[0].description}
+          />
+          <div className="flex-1">
+            <Image
+              src="/assets/blog/blog.png"
+              alt="marketing"
+              width={800}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </SectionLayout>
+
+      {/* section blog */}
+
+      <SectionLayout bg="">
+        <div className="flex flex-col items-center">
+          <h2 className="heading-secondary ">
+            {`  The Digital Marketer's Playbook: Insights, Ideas, and Inspiration`}
+          </h2>
+          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
+            Get valuable tips and tricks from our skilled digital marketing
+            teams. Boost your online performance and reach your goals with our
+            insights, ideas, and inspirations.
+          </p>
+        </div>
+        <div className="mt-8">
+          <div className="grid grid-cols-2 gap-[4rem]">
+            <Blog />
+            <Blog />
+            <Blog />
+            <Blog />
+          </div>
+        </div>
+      </SectionLayout>
+
+      <SectionLayout bg="bg-[#F4F4F4]">
+        <h2 className="heading-secondary text-center">
+          Level Up Your SEO Skills With Our Free Training
+        </h2>
+        <div className="mt-8">
+          <div className="grid grid-cols-3 gap-6 lg:gap-10 xl:gap-14">
+            <Seo />
+            <Seo />
+            <Seo />
+          </div>
+        </div>
+      </SectionLayout>
+
+      <Consultaion />
+    </>
+  );
+};
+
+export default page;
 
 const Blog = () => {
   return (
@@ -106,74 +163,3 @@ const Seo = () => {
     </div>
   );
 };
-
-const page = () => {
-  return (
-    <>
-      <Head>
-        <meta
-          name="description"
-          content="Learn communication tips from our Bayshore experts. Read our blogs on web-mobile app design, content writing, social media marketing, video production, and more."
-          key="desc"
-        />
-      </Head>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <div className="flex-1">
-            <Image
-              src="/assets/blog/blog.png"
-              alt="marketing"
-              width={800}
-              height={800}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </SectionLayout>
-
-      {/* section blog */}
-
-      <SectionLayout bg="">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            {`  The Digital Marketer's Playbook: Insights, Ideas, and Inspiration`}
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Get valuable tips and tricks from our skilled digital marketing
-            teams. Boost your online performance and reach your goals with our
-            insights, ideas, and inspirations.
-          </p>
-        </div>
-        <div className="mt-8">
-          <div className="grid grid-cols-2 gap-[4rem]">
-            <Blog />
-            <Blog />
-            <Blog />
-            <Blog />
-          </div>
-        </div>
-      </SectionLayout>
-
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <h2 className="heading-secondary text-center">
-          Level Up Your SEO Skills With Our Free Training
-        </h2>
-        <div className="mt-8">
-          <div className="grid grid-cols-3 gap-6 lg:gap-10 xl:gap-14">
-            <Seo />
-            <Seo />
-            <Seo />
-          </div>
-        </div>
-      </SectionLayout>
-
-      <Consultaion />
-    </>
-  );
-};
-
-export default page;

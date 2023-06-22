@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 let linksO: {
   title: string;
@@ -24,7 +24,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header>
+    <header className="fixed w-full bg-[#fff] z-50 top-0 left-0">
       <nav className="container flex justify-between items-center py-[1.8rem]">
         <div>
           <Link href="/">

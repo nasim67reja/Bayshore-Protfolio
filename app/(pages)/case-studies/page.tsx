@@ -2,9 +2,64 @@ import Consultaion from "@/components/universal/Consultaion";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
+import { Metadata } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Case-Bayshore Communication",
+  description:
+    "Discover our case studies and learn how Bayshore have helped many clients solve their communication challenges, improve their results, and achieve their ultimate goals.",
+};
+
+const page = () => {
+  return (
+    <>
+      <SectionLayout bg="bg-[#F4F4F4]">
+        <div className="flex justify-between items-center gap-12">
+          <HeroLeft
+            heading={hero[0].heading}
+            description={hero[0].description}
+          />
+          <div className="flex-1">
+            <Image
+              src="/assets/case-studies/case-studies.png"
+              alt="marketing"
+              width={800}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </SectionLayout>
+
+      {/* Featured */}
+      <SectionLayout bg="">
+        <SectionHeader
+          heading="Featured case studies"
+          text="Be inspired by our clients’ success stories. Learn how they used our solutions to grow their businesses. You can do it too."
+        />
+
+        <div className="mt-8">
+          <div className="flex flex-col gap-[3rem]">
+            <Featured />
+            <Featured />
+            <Featured />
+            <Featured />
+            <Featured />
+            <Featured />
+            <Featured />
+          </div>
+        </div>
+      </SectionLayout>
+
+      <Consultaion />
+    </>
+  );
+};
+
+export default page;
 
 let hero: {
   heading: string;
@@ -55,58 +110,3 @@ const Featured = () => {
     </div>
   );
 };
-
-const page = () => {
-  return (
-    <>
-      <Head>
-        <meta
-          name="description"
-          content="Discover our case studies and learn how Bayshore have helped many clients solve their communication challenges, improve their results, and achieve their ultimate goals."
-          key="desc"
-        />
-      </Head>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <div className="flex-1">
-            <Image
-              src="/assets/case-studies/case-studies.png"
-              alt="marketing"
-              width={800}
-              height={800}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </SectionLayout>
-
-      {/* Featured */}
-      <SectionLayout bg="">
-        <SectionHeader
-          heading="Featured case studies"
-          text="Be inspired by our clients’ success stories. Learn how they used our solutions to grow their businesses. You can do it too."
-        />
-
-        <div className="mt-8">
-          <div className="flex flex-col gap-[3rem]">
-            <Featured />
-            <Featured />
-            <Featured />
-            <Featured />
-            <Featured />
-            <Featured />
-            <Featured />
-          </div>
-        </div>
-      </SectionLayout>
-
-      <Consultaion />
-    </>
-  );
-};
-
-export default page;
