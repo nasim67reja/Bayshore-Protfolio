@@ -11,6 +11,7 @@ import Navbar from "@/components/universal/Navbar";
 import Results from "@/components/universal/Results";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
+import Head from "next/head";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
 
@@ -45,6 +46,13 @@ const Box4: any = [
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Welcome to Bayshore Communication!! Grow your brand or business with us. Whether you need digital marketing services, or software solutions, we've you covered."
+          key="desc"
+        />
+      </Head>
       <Navbar />
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">

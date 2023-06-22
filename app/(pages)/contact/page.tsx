@@ -4,6 +4,7 @@ import SectionLayout from "@/components/universal/SectionLayout";
 import Image from "next/image";
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import Head from "next/head";
 interface con {
   title: string;
   icon: string;
@@ -46,6 +47,13 @@ const Adress = ({ title }: col) => {
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Are you concerned about your business growth? Bayshore's here to help. Contact us today and get a free consultation. Let us show you how we can make a difference for your business."
+          key="desc"
+        />
+      </Head>
       <Image
         src="/assets/contact.png"
         alt="contact-office"

@@ -8,10 +8,19 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import Head from "next/head";
 
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Do you have any questions about Bayshore or our services? You might find the answers in our FAQ page, based on frequent queries from our customers and leads."
+          key="desc"
+        />
+      </Head>
+
       <h2 className="heading-secondary !text-center bg-[#F4F4F4] py-4 !mb-0">
         Frequently Asked Questions (FAQ)
       </h2>

@@ -2,6 +2,7 @@ import Consultaion from "@/components/universal/Consultaion";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -58,6 +59,13 @@ const Featured = () => {
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Discover our case studies and learn how Bayshore have helped many clients solve their communication challenges, improve their results, and achieve their ultimate goals."
+          key="desc"
+        />
+      </Head>
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">
           <HeroLeft

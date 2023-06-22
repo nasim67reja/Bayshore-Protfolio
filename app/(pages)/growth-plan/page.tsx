@@ -5,6 +5,7 @@ import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
 import Results from "@/components/universal/Results";
 import SectionLayout from "@/components/universal/SectionLayout";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -26,6 +27,13 @@ hero = [
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Do you want to take your company to the next stage? Increase conversions, or boost brand awareness? Join Bayshore and experience rapid growth with best marketing bundles."
+          key="desc"
+        />
+      </Head>
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">
           <HeroLeft

@@ -1,6 +1,7 @@
 import Consultaion from "@/components/universal/Consultaion";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionLayout from "@/components/universal/SectionLayout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -109,6 +110,13 @@ const Seo = () => {
 const page = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Learn communication tips from our Bayshore experts. Read our blogs on web-mobile app design, content writing, social media marketing, video production, and more."
+          key="desc"
+        />
+      </Head>
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="flex justify-between items-center gap-12">
           <HeroLeft
