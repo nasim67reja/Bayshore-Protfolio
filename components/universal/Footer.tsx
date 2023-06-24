@@ -33,10 +33,10 @@ quickLinks = [
 const Col = ({ text, links }: any) => {
   return (
     <div className="flex-1 md:translate-x-[20%] lg:translate-x-[30%]">
-      <h4 className="mb-10 heading-four ">{text}</h4>
+      <h4 className="mb-10 heading-four text-center">{text}</h4>
       <ul className="flex flex-col gap-2">
         {links.map((el: any, i: number) => (
-          <li className="text-link" key={i}>
+          <li className="text-small" key={i}>
             {typeof el === "string" ? (
               <>{el}</>
             ) : (
@@ -52,31 +52,35 @@ const Footer = () => {
   return (
     <footer>
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex gap-8">
-          <div className="flex-[1.5]">
-            <Image
-              src="/assets/bayshore-logo.svg"
-              alt="bayshore-logo"
-              width={366}
-              height={106}
-              className="w-[166px] h-[36px] mb-6"
-              priority
-            />
-            <p className="text-link  leading-[1.3]">{text}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-center gap-[3rem] md:gap-8">
+          <div className="">
+            <div className="center md:block">
+              <Image
+                src="/assets/bayshore-logo.svg"
+                alt="bayshore-logo"
+                width={366}
+                height={106}
+                className="w-[166px] h-[36px] mb-6"
+                priority
+              />
+            </div>
+            <p className="text-small  leading-[1.3] px-[2vw]  sm:px-0">
+              {text}
+            </p>
           </div>
           <Col text="Service" links={service} />
           <Col text="Quick links" links={quickLinks} />
 
           <div className="flex-[1.2] flex flex-col items-center  gap-6">
-            <h4 className="mb-10 heading-four">
+            <h4 className="mb-10 heading-four text-center">
               {/* By subscribing we inform about */}
               Social links
             </h4>
             <div className="center gap-4">
-              <BsFacebook className="w-[28px] h-auto" />
-              <AiFillInstagram className="w-[34px] h-auto" />
-              <BsLinkedin className="w-[28px] h-auto" />
-              <AiFillTwitterCircle className="w-[34px] h-auto" />
+              <BsFacebook className=" w-[2rem] lg:w-[2.8rem] h-auto" />
+              <AiFillInstagram className="w-[2.6rem] lg:w-[3.4rem] h-auto" />
+              <BsLinkedin className="w-[2rem] lg:w-[2.8rem] h-auto" />
+              <AiFillTwitterCircle className="w-[2.6rem] lg:w-[3.4rem] h-auto" />
             </div>
             {/* <input
               className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4 bg-[#EAEAEA]"

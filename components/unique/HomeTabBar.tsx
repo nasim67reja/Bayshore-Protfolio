@@ -18,9 +18,9 @@ const tabs: Tab[] = [
     ),
     content: (
       <>
-        <div className="flex  gap-8">
-          <div className="flex-1  rounded-[10px] custom-shadow p-16">
-            <h3 className="heading-tertiary">Domain Specific Talents </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+          <div className="rounded-[10px] custom-shadow px-4 py-16 md:p-16">
+            <h3 className="heading-tertiary ">Domain Specific Talents </h3>
             <p className="text-base">
               {`   Bayshore's expert teams can create engaging and responsive
                 websites and apps, design stunning and visually appealing
@@ -32,7 +32,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="flex-1">
+          <div className="row-start-1">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -51,8 +51,8 @@ const tabs: Tab[] = [
     label: "Focus on Results",
     content: (
       <>
-        <div className="flex  gap-8">
-          <div className="flex-1  rounded-[10px] custom-shadow p-16">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+          <div className="rounded-[10px] custom-shadow px-4 py-16 md:p-16">
             <h3 className="heading-tertiary">Only Numbers Speaks</h3>
             <p className="text-base">
               {`
@@ -68,7 +68,7 @@ const tabs: Tab[] = [
               `}
             </p>
           </div>
-          <div className="flex-1">
+          <div className="row-start-1">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -91,8 +91,8 @@ const tabs: Tab[] = [
     ),
     content: (
       <>
-        <div className="flex  gap-8">
-          <div className="flex-1  rounded-[10px] custom-shadow p-16">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+          <div className="rounded-[10px] custom-shadow px-4 py-16 md:p-16">
             <h3 className="heading-tertiary">{`Industry's Best Tools`}</h3>
             <p className="text-base">
               {`
@@ -109,7 +109,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="flex-1">
+          <div className="row-start-1">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -128,8 +128,8 @@ const tabs: Tab[] = [
     label: "Time and Cost Efficiency",
     content: (
       <>
-        <div className="flex  gap-8">
-          <div className="flex-1  rounded-[10px] custom-shadow p-16">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+          <div className="rounded-[10px] custom-shadow px-4 py-16 md:p-16">
             <h3 className="heading-tertiary">Ignore AB Testing</h3>
             <p className="text-base">
               {`
@@ -145,7 +145,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="flex-1">
+          <div className="row-start-1">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -166,11 +166,11 @@ export default function HomeTabBar() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="px-[8rem]">
-      <div className="flex justify-between items-center rounded-[10px] custom-shadow px-[11rem] py-[1.6rem]">
+    <div className="md:px-[2rem] lg:px-[8rem]">
+      <div className="flex justify-between items-center rounded-[10px] custom-shadow px-[1rem] sm:px-[4rem] md:px-[11rem] py-[1.6rem] gap-2">
         {tabs.map((tab, index) => (
-          <div
-            className={`flex flex-col items-center  py-4 px-8 rounded-[10px] cursor-pointer ${
+          <button
+            className={`flex flex-col items-center  py-4 px-2 md:px-8 rounded-[10px] cursor-pointer ${
               activeTab === index ? "custom-shadow " : ""
             }`}
             key={index}
@@ -181,18 +181,19 @@ export default function HomeTabBar() {
               alt="svg-logo"
               width={100}
               height={100}
-              className="h-[26px] w-[26px]"
+              className="md:h-[26px] md:w-[26px] h-[14px] w-[14px]"
             />
-            <button
-              className={`py-2 text-[12px] text-[#A2A2A2] text-center font-bold ${
+            <p
+              className={`py-2 text-[1.2rem] text-[#A2A2A2] text-center font-bold ${
                 activeTab === index ? "bg-gray-200" : ""
               }`}
             >
               {tab.label}
-            </button>
-          </div>
+            </p>
+          </button>
         ))}
       </div>
+
       <div className="p-4">
         {tabs.map(
           (tab, index) =>

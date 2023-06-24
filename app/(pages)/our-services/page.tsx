@@ -36,7 +36,7 @@ const page = () => {
   return (
     <>
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-16">
           <HeroLeft
             heading={hero[0].heading}
             description={hero[0].description}
@@ -47,7 +47,7 @@ const page = () => {
       <Info />
       <SectionLayout bg="">
         <h2 className="heading-secondary text-center">Our Services</h2>
-        <div className="grid grid-cols-2 gap-[8rem] mt-[6rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[8rem] mt-[6rem]">
           {services.map(
             (
               el: {

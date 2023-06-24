@@ -23,30 +23,30 @@ import "~slick-carousel/slick/slick-theme.css"; */
 
 /* Text */
 .text-link {
-  @apply text-[12px] sm:text-[13px] lg:text-[14px] text-[#343];
+  @apply text-[1.6rem] md:text-[1.3rem] lg:text-[1.4rem] text-[#343];
 }
 .text-small {
-  @apply text-[12px] sm:text-[13px] lg:text-[14px] text-[#343] leading-[1.4];
+  @apply text-[1.6rem] sm:text-[1.4rem] lg:text-[1.4rem] text-[#343] leading-[1.4] text-center  md:text-justify;
 }
 .text-base {
-  @apply text-[14px] sm:text-[15px] md:text-[16px] leading-[143%] text-justify text-[#343];
+  @apply text-[1.7rem] sm:text-[1.8rem] md:text-[1.6rem] leading-[143%] text-center  md:text-justify text-[#343];
 }
 .info-text {
-  @apply text-[30px]  text-[#fff];
+  @apply text-[2.2rem] md:text-[3rem]  text-[#fff];
 }
 /* Header */
 .heading-primary {
-  @apply text-[28px] sm:text-[36px] md:text-[42] leading-[34px]  md:text-[43px] lg:text-[48px] lg:leading-[49px] text-headingPrimary font-[700] mb-[2.5rem];
+  @apply text-[2.8rem] sm:text-[3.4rem]  leading-[3.4rem]  lg:text-[3.8rem] xl:text-[4.2rem] 2xl:text-[4.8rem] lg:leading-[4.9rem] text-headingPrimary font-[700] mb-[1.5rem] md:mb-[2.5rem] text-center md:text-start;
 }
 .heading-secondary {
   /* @apply text-[32px] leading-[38px]  md:text-[43px] lg:text-[48px] lg:leading-[53px] text-headingPrimary font-[700] mb-[2rem]; */
-  @apply text-[18px] sm:text-[20px] md:text-[24px] lg:text-[30px] xl:text-[36px] font-[600] text-headingPrimary mb-[1.8rem];
+  @apply text-[18px] sm:text-[20px] md:text-[24px] lg:text-[30px] xl:text-[36px] font-[600] text-headingPrimary mb-[1.8rem] text-center md:text-start;
 }
 .heading-tertiary {
-  @apply text-headingPrimary font-semibold text-[16px] md:text-[20px] lg:text-[24px] mb-[1rem];
+  @apply text-headingPrimary font-semibold text-[2rem] md:text-[2rem] lg:text-[2.4rem] mb-[1rem] text-center md:text-start;
 }
 .heading-four {
-  @apply text-headingPrimary font-semibold text-[16px] lg:text-[18px];
+  @apply text-headingPrimary font-semibold text-[1.8rem] lg:text-[1.8rem] leading-[1.2];
 }
 /* button */
 .btn {
@@ -106,6 +106,9 @@ body {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.text-cut-1 {
+  -webkit-line-clamp: 1;
 }
 .text-cut-5 {
   -webkit-line-clamp: 5;
@@ -223,4 +226,19 @@ body {
 }
 .overflow-hidden .py-4 {
   padding: 0 !important;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media (max-width: 68em) {
+  .custom-info {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }

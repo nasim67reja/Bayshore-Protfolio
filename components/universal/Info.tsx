@@ -6,23 +6,23 @@ const Info = () => {
   return (
     <div className="bg-img">
       <SectionLayout bg="">
-        <div className="flex justify-between items-center">
-          <div className="center gap-8">
+        <div className="custom-info grid  grid-cols-2 justify-between items-center">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-8 ">
             <Image
               src="/assets/salman-n.png"
               alt="salman"
               width={150}
               height={150}
-              className="w-[110px] h-[110px] rounded-full border-[5px] border-[#fff]"
+              className="w-[11rem]  h-[11rem] rounded-full border-[5px] border-[#fff]"
             />
             <div>
               <p className="text-base mb-2 opacity-80 !text-[#fff]">
                 Ready to speak with a marketing expert? Give us a ring
               </p>
-              <p className="info-text">0168504449</p>
+              <p className="info-text text-center sm:text-start">0168504449</p>
             </div>
           </div>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap sm:flex-nowrap justify-center  items-center gap-8">
             <div className="flex flex-col">
               <p className="info-text text-center">1.6 million</p>
               <p className="text-base mb-2 opacity-80 !text-[#fff]">

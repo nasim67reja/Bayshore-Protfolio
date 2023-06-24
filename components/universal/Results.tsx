@@ -13,7 +13,7 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
     <SectionLayout bg="">
       <div className="flex flex-col items-center">
         <div className="max-w-[690px] mx-auto">
-          <h2 className="heading-secondary text-center">{heading}</h2>
+          <h2 className="heading-secondary !text-center">{heading}</h2>
           <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
             We have some amazing results to show you. Our clients are delighted
             with our services and their outcomes. Click below to view our most
@@ -22,7 +22,7 @@ const Results: React.FC<resultInfo> = ({ heading }) => {
         </div>
         <button
           type="submit"
-          className="btn text-[14px] !py-4 flex items-center gap-8"
+          className="btn text-small !py-4 flex items-center gap-8"
         >
           <span>View our success stories</span>
           <span className="inline-block translate-y-[1px]">
@@ -47,7 +47,7 @@ let logos: {
 
 const ClientLogos = () => {
   return (
-    <div className="grid grid-cols-5 justify-center gap-12 items-center gap-y-[8rem]">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 justify-center gap-12 justify-items-center items-center gap-y-[8rem]">
       <Image
         src="/assets/client-logo/swop.svg"
         alt="swop"

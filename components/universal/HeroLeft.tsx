@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineRight } from "react-icons/ai";
 import SectionLayout from "./SectionLayout";
+import ProposalBtn from "./ProposalBtn";
 
 interface heroInfo {
   heading: string;
@@ -9,21 +10,13 @@ interface heroInfo {
 
 export const HeroForm = () => {
   return (
-    <form className="flex items-center gap-8 mt-[2.5rem]">
+    <form className="flex items-center gap-4 sm:gap-8 mt-[1.5rem] lg:mt-[2.5rem]">
       <input
-        className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4"
+        className="placeholder-center rounded-[10px] outline-none text-small py-4 px-4 md:py-6 md:px-8"
         type="text"
         placeholder="Enter your email"
       />
-      <button
-        type="submit"
-        className="btn text-[14px] !py-4 flex items-center gap-8"
-      >
-        <span>Send us a proposal</span>
-        <span className="inline-block translate-y-[1px]">
-          <AiOutlineRight />
-        </span>
-      </button>
+      <ProposalBtn />
     </form>
   );
 };

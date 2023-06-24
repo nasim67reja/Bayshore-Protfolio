@@ -6,6 +6,7 @@ import HomeTabBar from "@/components/unique/HomeTabBar";
 import AboutUs from "@/components/universal/AboutUs";
 import Boost from "@/components/universal/Boost";
 import Footer from "@/components/universal/Footer";
+import { HeroForm } from "@/components/universal/HeroLeft";
 import Info from "@/components/universal/Info";
 import Navbar from "@/components/universal/Navbar";
 import Results from "@/components/universal/Results";
@@ -25,31 +26,16 @@ const page = () => {
     <>
       <Navbar />
       <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12 mt-[72px]">
-          <div className="flex-1">
-            <p className="text-[16px] md:text-[20px] text-[#3E7BE2] mb-[2.5rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-[72px] items-center">
+          <div className="flex flex-col justify-center items-center md:block">
+            <p className="text-base !text-[#3E7BE2] mb-[1.5rem] lg:mb-[2.5rem]">
               {hero[0].text}
             </p>
             <h1 className="heading-primary">{hero[0].heading}</h1>
-            <p className="text-base">{hero[0].description}</p>
-            <form className="flex items-center gap-8 mt-[2.5rem]">
-              <input
-                className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4"
-                type="text"
-                placeholder="Enter your email"
-              />
-              <button
-                type="submit"
-                className="btn text-[14px] !py-4 flex items-center gap-8"
-              >
-                <span>Send us a Proposal</span>
-                <span className="inline-block translate-y-[1px]">
-                  <AiOutlineRight />
-                </span>
-              </button>
-            </form>
+            <p className="text-base ">{hero[0].description}</p>
+            <HeroForm />
           </div>
-          <div className="flex-1">
+          <div className="px-[2rem] sm:px-[6rem] md:px-0">
             <Image
               src="/assets/demo.svg"
               alt="marketing"
@@ -63,21 +49,16 @@ const page = () => {
 
       {/* Logo section */}
       <SectionLayout bg="">
-        {/* <LogoSlide /> */}
         <HomeLogoLoop />
       </SectionLayout>
       {/* Tailored */}
       <SectionLayout bg="">
-        <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            Tailored marketing solutions for your unique needs
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            We deliver results that exceed your expectations, marketing needs,
+        <SectionHeader
+          heading="Tailored marketing solutions for your unique needs"
+          text="  We deliver results that exceed your expectations, marketing needs,
             goals and fits your budget. Our expertise, creativity, and passion
-            will make your business shine.
-          </p>
-        </div>
+            will make your business shine."
+        />
         <div className="mt-8">
           <HomeTabBar />
         </div>
@@ -91,17 +72,6 @@ const page = () => {
       />
       {/* Campaigns */}
       <SectionLayout bg="">
-        {/* <div className="flex flex-col items-center">
-          <h2 className="heading-secondary ">
-            Drive results through innovative digital marketing campaigns
-          </h2>
-          <p className="text-base !text-center max-w-[622px] mx-auto mb-10">
-            Looking to power up your digital strategy? WebFX offers a wide range
-            of digital marketing services that work together to attract,
-            delight, and convert leads. Toss in our proprietary tech-powered
-            suite of tools, and your campaign is unbeatable.
-          </p>
-        </div> */}
         <SectionHeader
           heading="Drive results through innovative digital marketing campaigns"
           text="Enhance your online presence and reach more customers with Bayshore Communication.
@@ -109,7 +79,7 @@ We provides an extensive digital marketing services that work in synergy
 to create, engage, and convert leads. Plus, our exclusive tech-powered tools give you an edge over the competition."
         />
         <div className="mt-8">
-          <div className="flex mb-8 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2  mb-8 gap-8 lg:gap-[5rem] px-2 sm:px-[10vw] md:px-0 justify-between ">
             <HomeServiceCard
               imgLink="/assets/web.svg"
               title="Grow Website Organic Traffic"
@@ -120,8 +90,6 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
               title="Targeted Data-Driven ad campaigns"
               box={Box2}
             />
-          </div>
-          <div className="flex gap-8">
             <HomeServiceCard
               imgLink="/assets/analytics.svg"
               title="Tracking, Measure and Management "
@@ -144,7 +112,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
           "
           text="We offer creative solutions, data-driven strategies, and measurable results for your digital marketing needs. Choose us and grow your business online."
         />
-        <div className="flex mt-12 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-16 items-center">
           <div className="flex-1">
             <h3 className="heading-tertiary">
               Get Advantage and Access to Our Tools and Expertise
@@ -157,7 +125,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
               efficiency. Get in touch today and get ahead of the competition.
             </p>
           </div>
-          <div className="flex-1 flex flex-col gap-12 pl-[5rem]">
+          <div className="row-start-1 flex flex-col gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
             <Progress
               title="Business Automation"
               bg="bg-[#FFBF45]"
@@ -194,14 +162,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
           </p>
         </div>
         <div className="mt-8">
-          {/* <Image
-            src="/assets/marketing.svg"
-            alt="marketing"
-            width={1200}
-            height={1200}
-            className="w-full h-auto"
-          /> */}
-          <div className="grid grid-cols-4 gap-[8rem] ">
+          <div className="grid grid-cols-2 md:grid-cols-4  gap-[4rem] sm:gap-[2rem] md:gap-[4rem] lg:gap-[8rem] ">
             {links.map((el: any, i: number) => (
               <LogosM el={el} key={i} />
             ))}
@@ -319,16 +280,16 @@ links = [
 const LogosM = ({ el }: any) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="px-[5.5rem]">
+      <div className=" px-[5vw] sm:px-[5rem] md:px-[5.5rem] center">
         <Image
           src={el.link}
           alt={el.alt}
           width={600}
           height={600}
-          className="w-full h-auto"
+          className="w-[50%] sm:w-[50%] h-auto"
         />
       </div>
-      <h4 className="heading-four text-center">{el.text}</h4>
+      <h4 className="heading-four text-center text-cut-2">{el.text}</h4>
     </div>
   );
 };

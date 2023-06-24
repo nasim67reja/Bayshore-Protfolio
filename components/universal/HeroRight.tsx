@@ -27,7 +27,7 @@ const Card = () => {
 };
 const HeroRight = () => {
   return (
-    <div className="flex-1 pl-[4rem]">
+    <div className=" row-start-1 md:pl-[4rem]">
       <div className="flex flex-col gap-4">
         <Card />
         <Card />
