@@ -1,8 +1,6 @@
 import AboutUs from "@/components/universal/AboutUs";
 import Consultaion from "@/components/universal/Consultaion";
 import Hero from "@/components/universal/Hero";
-import HeroLeft from "@/components/universal/HeroLeft";
-import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
 import SectionLayout from "@/components/universal/SectionLayout";
 import { Metadata } from "next";
@@ -27,11 +25,11 @@ hero = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Service-Bayshore Communication",
-  description:
-    "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore. ",
-};
+// export const metadata: Metadata = {
+//   title: "Service-Bayshore Communication",
+//   description:
+//     "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore. ",
+// };
 
 const page = () => {
   return (
