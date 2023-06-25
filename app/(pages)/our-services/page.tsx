@@ -26,11 +26,11 @@ hero = [
   },
 ];
 
-// export const metadata: Metadata = {
-//   title: "Service-Bayshore Communication",
-//   description:
-//     "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore. ",
-// };
+export const metadata: Metadata = {
+  title: "Service-Bayshore Communication",
+  description:
+    "Are you looking for a communication partner who can help you create a lasting impression on digital market? Browse our website and fulfill your dream with Bayshore. ",
+};
 
 const page = () => {
   return (

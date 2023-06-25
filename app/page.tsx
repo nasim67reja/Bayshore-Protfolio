@@ -126,7 +126,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
               efficiency. Get in touch today and get ahead of the competition.
             </p>
           </div>
-          <div className="row-start-1 col-start-2 flex flex-col gap-8 lg:gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
+          <div className=" flex flex-col gap-8 lg:gap-12 md:pl-[5rem] sm:px-[15vw] md:px-0">
             <Progress
               title="Business Automation"
               bg="bg-[#FFBF45]"

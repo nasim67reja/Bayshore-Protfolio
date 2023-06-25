@@ -32,7 +32,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="row-start-1 col-start-2">
+          <div className="row-start-1 md:col-start-2">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -68,7 +68,7 @@ const tabs: Tab[] = [
               `}
             </p>
           </div>
-          <div className="row-start-1 col-start-2">
+          <div className="row-start-1 md:col-start-2">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -109,7 +109,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="row-start-1 col-start-2">
+          <div className="row-start-1 md:col-start-2">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"
@@ -145,7 +145,7 @@ const tabs: Tab[] = [
                 `}
             </p>
           </div>
-          <div className="row-start-1 col-start-2">
+          <div className="row-start-1 md:col-start-2">
             <Image
               src="/assets/tab-1.png"
               alt="tab-1"

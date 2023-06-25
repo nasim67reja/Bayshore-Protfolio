@@ -84,9 +84,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-[5px] h-[1px] bg-[#DBDBDB]"></div>
+        <div className="w-full mt-6 h-[1px] bg-[#DBDBDB]"></div>
         <div>
-          <p className="text-small">
+          <p className="text-small mt-8 ">
             Copyright © 2023 All Rights Reserved by Bayshore Communication.
           </p>
         </div>

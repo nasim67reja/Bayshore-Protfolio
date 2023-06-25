@@ -63,27 +63,15 @@ impressive outcomes and provide outstanding support to their clients.`}
 
         <div className="mt-8">
           <div className="grid  md:w-full grid-cols-1 md:grid-cols-3 gap-16 xl:gap-[10rem] max-w-[1000px] mx-auto px-4">
-            <Card />
-            <Card />
-            <Card />
+            {cardContent.map((el: any, i: number) => (
+              <Card el={el} key={i} />
+            ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-[4rem] gap-8">
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
-            <CardSmall />
+            {cardContentS.map((el: any, i: number) => (
+              <CardSmall el={el} key={i} />
+            ))}
           </div>
         </div>
       </SectionLayout>
@@ -101,18 +89,42 @@ impressive outcomes and provide outstanding support to their clients.`}
 
 export default page;
 
-const Card = () => {
+let cardContent: {
+  img: string;
+  name: string;
+  destination: string;
+}[];
+
+cardContent = [
+  {
+    img: "/assets/about/salman.png",
+    name: "SALMAN H SAIKOTE",
+    destination: "CHIEF TECHNOLOGY OFFICER (CTO)",
+  },
+  {
+    img: "/assets/about/huraira.png",
+    name: "HURAIRA SHISHIR",
+    destination: "CHIEF EXECUTIVE OFFICER (CEO)",
+  },
+  {
+    img: "/assets/about/neel.png",
+    name: "ARJO NEEL",
+    destination: "DIGITAL MARKETING  STRATEGIST CONSULTENT",
+  },
+];
+
+const Card = ({ el }: any) => {
   return (
     <div className=" flex flex-col items-center gap-3 custom-shadow py-8  px-4  w-[26rem] lg:w-[30rem] justify-self-center">
       <Image
-        src="/assets/about/salman.png"
-        alt="swop"
+        src={el.img}
+        alt={el.name}
         width={400}
         height={400}
         className="w-[20rem] h-auto"
       />
-      <h4 className="heading-four mt-[1rem]">SALMAN H SAIKOTE</h4>
-      <p className="text-small !text-center">CHIEF TECHNOLOGY OFFICER (CTO)</p>
+      <h4 className="heading-four mt-[1rem]">{el.name}</h4>
+      <p className="text-small !text-center">{el.destination}</p>
       <div className="flex items-center gap-2">
         <BsLinkedin className="text-[#5A5A5A] w-[18px] h-auto" />
         <FaTwitterSquare className="text-[#5A5A5A] w-[20px] h-auto" />
@@ -123,18 +135,87 @@ const Card = () => {
   );
 };
 
-const CardSmall = () => {
+let cardContentS: {
+  img: string;
+  name: string;
+  destination: string;
+}[];
+
+cardContentS = [
+  {
+    img: "/assets/about/romiz.png",
+    name: "ASHRAF UJJAMAN",
+    destination: "CHIEF OPERATING OFFICER (COO)",
+  },
+  {
+    img: "/assets/about/sadit.png",
+    name: "SADIT AHSAN",
+    destination: "SENIOR GRAPHICS DESIGNER",
+  },
+  {
+    img: "/assets/about/razon.png",
+    name: "REZAUL KARIM",
+    destination: "DIGITAL ADS EXPERT",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+  {
+    img: "/assets/about/rakib.png",
+    name: "RAKIBUL ISLAM",
+    destination: "SENIOR DEVELOPER",
+  },
+];
+
+const CardSmall = ({ el }: any) => {
   return (
     <div className="  flex flex-col items-center gap-3 custom-shadow py-4 px-4">
       <Image
-        src="/assets/about/romiz.png"
-        alt="swop"
+        src={el.img}
+        alt={el.name}
         width={400}
         height={400}
         className="w-[120px] h-auto"
       />
-      <h5 className="heading-five mt-[5px]">ASHRAF UJJAMAN</h5>
-      <p className="text-xsmall !text-center">CHIEF OPERATING OFFICER (COO)</p>
+      <h5 className="heading-five mt-[5px]">{el.name}</h5>
+      <p className="text-xsmall !text-center">{el.destination}</p>
       <div className="flex items-center gap-2">
         <BsLinkedin className="text-[#5A5A5A] w-[1.8rem] h-auto" />
         <FaTwitterSquare className="text-[#5A5A5A] w-[2rem] h-auto" />
