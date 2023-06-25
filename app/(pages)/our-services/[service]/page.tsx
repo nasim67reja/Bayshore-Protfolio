@@ -1,7 +1,7 @@
 "use client";
+import { services } from "@/components/unique/services/Service";
 import SectionLayout from "@/components/universal/SectionLayout";
 import { StickyContainer, Sticky } from "react-sticky";
-import { services } from "../page";
 const page = () => {
   return (
     <SectionLayout bg="">

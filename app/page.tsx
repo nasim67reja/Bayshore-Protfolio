@@ -114,7 +114,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
           text="We offer creative solutions, data-driven strategies, and measurable results for your digital marketing needs. Choose us and grow your business online."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-16 items-center">
-          <div className="flex-1">
+          <div className="">
             <h3 className="heading-tertiary">
               Get Advantage and Access to Our Tools and Expertise
             </h3>
@@ -126,7 +126,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
               efficiency. Get in touch today and get ahead of the competition.
             </p>
           </div>
-          <div className="row-start-1 flex flex-col gap-8 lg:gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
+          <div className="row-start-1 col-start-2 flex flex-col gap-8 lg:gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
             <Progress
               title="Business Automation"
               bg="bg-[#FFBF45]"
