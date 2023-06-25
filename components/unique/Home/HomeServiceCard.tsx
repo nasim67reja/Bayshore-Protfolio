@@ -7,13 +7,13 @@ interface con {
 
 const Box: React.FC<con> = ({ content }) => {
   return (
-    <div className="flex gap-2 md:gap-4 items-center my-[1rem] md:my-[1.5rem]">
+    <div className="flex gap-2 md:gap-4  my-[1rem] md:my-[1.5rem]">
       <Image
         src="/assets/mark.svg"
         alt="marking"
         width={50}
         height={50}
-        className="w-[20px] h-[20px]"
+        className="w-[2rem] h-[2rem]"
       />
       <p className="underline !text-[#207DE9] text-[12px] md:text-[14px]">
         {content}
@@ -45,7 +45,7 @@ const HomeServiceCard: React.FC<box> = ({ title, imgLink, box }) => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-2 md:gap-4 md:gap-y-[2rem] lg:gap-8 mt-8">
+      <div className="grid grid-cols-2 gap-x-3 md:gap-4 md:gap-y-[2rem] lg:gap-8 mt-8">
         {box.map((el: string, i: number) => (
           <Box key={i} content={el} />
         ))}

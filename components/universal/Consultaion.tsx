@@ -14,9 +14,9 @@ const Consultaion = () => {
             `}
         </p>
 
-        <button className="btn text-[14px] !py-4 flex items-center gap-8">
+        <button className="btn text-small !py-4 flex items-center gap-4 md:gap-8">
           <span>Book now 30 min Free Consultation</span>
-          <span className="inline-block translate-y-[1px]">
+          <span className="inline-block translate-y-[0px]">
             <AiOutlineRight />
           </span>
         </button>

@@ -1,4 +1,5 @@
 import Consultaion from "@/components/universal/Consultaion";
+import { HeroWithImage } from "@/components/universal/Hero";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionLayout from "@/components/universal/SectionLayout";
 import { Metadata } from "next";
@@ -27,23 +28,11 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <div className="flex-1">
-            <Image
-              src="/assets/blog/blog.png"
-              alt="marketing"
-              width={800}
-              height={800}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </SectionLayout>
+      <HeroWithImage
+        heading={hero[0].heading}
+        description={hero[0].description}
+        imgLink="/assets/blog/blog.png"
+      />
 
       {/* section blog */}
 
@@ -59,7 +48,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-8">
-          <div className="grid grid-cols-2 gap-[4rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[4rem]">
             <Blog />
             <Blog />
             <Blog />
@@ -73,7 +62,7 @@ const page = () => {
           Level Up Your SEO Skills With Our Free Training
         </h2>
         <div className="mt-8">
-          <div className="grid grid-cols-3 gap-6 lg:gap-10 xl:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 xl:gap-14">
             <Seo />
             <Seo />
             <Seo />
@@ -104,20 +93,20 @@ const Blog = () => {
           alt="marketing"
           width={800}
           height={800}
-          className="w-[80px] h-auto absolute bottom-0 left-[3%] translate-y-[50%]"
+          className="w-[6rem] md:w-[8rem] h-auto absolute bottom-0 left-[3%] translate-y-[50%]"
         />
       </div>
-      <div className="flex justify-between items-center w-[80%] ml-auto">
-        <p className="text-small">
+      <div className="cus-name flex justify-between items-center w-[78%] sm:w-[80%] ml-auto">
+        <p className="text-xsmall">
           By: <span className="text-[#0077B3]"> Kelsey Jones </span>
         </p>
-        <p className="text-small">June 7, 2023</p>
+        <p className="text-xsmall">June 7, 2023</p>
       </div>
-      <h4 className="heading-four mt-[4.5rem]">
+      <h4 className="heading-four mt-[3rem] md:mt-[4.5rem]">
         {` B2B SEO in 2023: What's New and How to Adapt Your Strategy for Success`}
       </h4>
       <div>
-        <h5 className="text-small !text-[#0077B3] mt-[3rem] mb-[2rem]">
+        <h5 className="text-small !text-[#0077B3] md:mt-[3rem] md:mb-[2rem] my-[1.5rem]">
           Content Marketing
         </h5>
         <p className="text-small text-cut text-cut-5">
@@ -129,8 +118,8 @@ const Blog = () => {
           beyond.
         </p>
       </div>
-      <div>
-        <button className="!text-[#4DBDEB] border-[1px] border-[#4DBDEB] px-[10px] py-[8px] rounded-[10px] text-small mt-[2rem]">
+      <div className="center md:block">
+        <button className="!text-[#4DBDEB] border-[1px] border-[#4DBDEB] px-[1rem] py-[0.8rem] rounded-[10px] text-xsmall mt-[2rem]">
           Read this post
         </button>
       </div>
@@ -149,7 +138,7 @@ const Seo = () => {
         className="w-full h-auto "
       />
       <h4 className="heading-four my-6">Moz Academy Training</h4>
-      <p>Complete courses to master SEO basics</p>
+      <p className="text-small">Complete courses to master SEO basics</p>
       <p className="text-small  mt-10 flex justify-center items-center gap-4">
         <span className="text-[#0077B3]">Start Learing </span>
         <Image

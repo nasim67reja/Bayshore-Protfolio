@@ -62,13 +62,13 @@ impressive outcomes and provide outstanding support to their clients.`}
         />
 
         <div className="mt-8">
-          <div className="grid grid-cols-3 gap-16 xl:gap-[10rem]">
+          <div className="grid  md:w-full grid-cols-1 md:grid-cols-3 gap-16 xl:gap-[10rem] max-w-[1000px] mx-auto px-4">
             <Card />
             <Card />
             <Card />
           </div>
 
-          <div className="grid grid-cols-5 mt-[4rem] gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-[4rem] gap-8">
             <CardSmall />
             <CardSmall />
             <CardSmall />
@@ -88,13 +88,13 @@ impressive outcomes and provide outstanding support to their clients.`}
         </div>
       </SectionLayout>
 
-      <SectionLayout bg="">
+      {/* <SectionLayout bg="">
         <SectionHeader
           heading="Our History"
           text="By being available to our clients, we can respond to their concerns and questions and carry out our duty for keeping our clients up-to-date about the case."
         />
         <History />
-      </SectionLayout>
+      </SectionLayout> */}
     </>
   );
 };
@@ -103,16 +103,16 @@ export default page;
 
 const Card = () => {
   return (
-    <div className=" flex flex-col items-center gap-3 custom-shadow py-8">
+    <div className=" flex flex-col items-center gap-3 custom-shadow py-8  px-4  w-[26rem] lg:w-[30rem] justify-self-center">
       <Image
         src="/assets/about/salman.png"
         alt="swop"
         width={400}
         height={400}
-        className="w-[208px] h-auto"
+        className="w-[20rem] h-auto"
       />
-      <h4 className="heading-four mt-[5px]">SALMAN H SAIKOTE</h4>
-      <p className="text-link">CHIEF TECHNOLOGY OFFICER (CTO)</p>
+      <h4 className="heading-four mt-[1rem]">SALMAN H SAIKOTE</h4>
+      <p className="text-small !text-center">CHIEF TECHNOLOGY OFFICER (CTO)</p>
       <div className="flex items-center gap-2">
         <BsLinkedin className="text-[#5A5A5A] w-[18px] h-auto" />
         <FaTwitterSquare className="text-[#5A5A5A] w-[20px] h-auto" />
@@ -133,13 +133,13 @@ const CardSmall = () => {
         height={400}
         className="w-[120px] h-auto"
       />
-      <h4 className="heading-four mt-[5px]">ASHRAF UJJAMAN</h4>
-      <p className="text-small !text-center">CHIEF OPERATING OFFICER (COO)</p>
+      <h5 className="heading-five mt-[5px]">ASHRAF UJJAMAN</h5>
+      <p className="text-xsmall !text-center">CHIEF OPERATING OFFICER (COO)</p>
       <div className="flex items-center gap-2">
-        <BsLinkedin className="text-[#5A5A5A] w-[18px] h-auto" />
-        <FaTwitterSquare className="text-[#5A5A5A] w-[20px] h-auto" />
-        <FaWhatsappSquare className="text-[#5A5A5A] w-[20px] h-auto" />
-        <MdMarkEmailUnread className="text-[#5A5A5A] w-[24px] h-auto" />
+        <BsLinkedin className="text-[#5A5A5A] w-[1.8rem] h-auto" />
+        <FaTwitterSquare className="text-[#5A5A5A] w-[2rem] h-auto" />
+        <FaWhatsappSquare className="text-[#5A5A5A] w-[2rem] h-auto" />
+        <MdMarkEmailUnread className="text-[#5A5A5A] w-[2.4rem] h-auto" />
       </div>
     </div>
   );

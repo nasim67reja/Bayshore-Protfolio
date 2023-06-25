@@ -1,4 +1,5 @@
 import Consultaion from "@/components/universal/Consultaion";
+import { HeroWithImage } from "@/components/universal/Hero";
 import HeroLeft from "@/components/universal/HeroLeft";
 import SectionHeader from "@/components/universal/SectionHeader";
 import SectionLayout from "@/components/universal/SectionLayout";
@@ -16,24 +17,11 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <div className="flex-1">
-            <Image
-              src="/assets/case-studies/case-studies.png"
-              alt="marketing"
-              width={800}
-              height={800}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </SectionLayout>
-
+      <HeroWithImage
+        heading={hero[0].heading}
+        description={hero[0].description}
+        imgLink="/assets/case-studies/case-studies.png"
+      />
       {/* Featured */}
       <SectionLayout bg="">
         <SectionHeader
@@ -75,8 +63,8 @@ hero = [
 
 const Featured = () => {
   return (
-    <div className="flex ">
-      <div className="flex-1">
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
+      <div className="">
         <Image
           src="/assets/case-studies/office.png"
           alt="man-working-on-office"
@@ -85,14 +73,14 @@ const Featured = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className="flex-1 bg-[#F4F4F4] rounded-r-[20px] px-[10rem] py-[2rem]">
-        <div className="flex flex-col gap-[2.5rem] items-start">
+      <div className=" bg-[#F4F4F4] md:rounded-r-[20px] px-8 md:px-[10rem] py-[2rem]">
+        <div className="flex flex-col gap-[1.5rem] md:gap-[2.5rem] md:items-start items-center">
           <Image
             src="/assets/case-studies/arm-candy.svg"
             alt="arm-candy"
             width={200}
             height={100}
-            className="w-[17.4rem] h-auto"
+            className="w-[12rem] sm:w-[15rem] md:w-[17.4rem] h-auto"
           />
           <h4 className="heading-four ">
             Saving 5 months of working hours every month

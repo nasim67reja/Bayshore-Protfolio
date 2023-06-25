@@ -4,7 +4,7 @@ import FocusOnSelect from "../unique/DemoSlider";
 
 const AboutUs = () => {
   return (
-    <SectionLayout bg="bg-[#F4F4F4]">
+    <SectionLayout bg="bg-[#F4F4F4] hidden md:block">
       <div className="flex flex-col items-center">
         <h2 className="heading-secondary ">
           Here is what our client saying about us

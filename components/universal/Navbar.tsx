@@ -71,7 +71,7 @@ const Navbar = () => {
                 alt="bayshore-logo"
                 width={366}
                 height={106}
-                className=" w-[16rem] h-[36px] "
+                className="w-[14rem] md:w-[16rem] h-auto "
                 priority
               />
             </Link>
@@ -88,6 +88,7 @@ const Navbar = () => {
                     pathname === el.link ? "active !text-primary" : ""
                   }`}
                   key={i}
+                  onClick={toggleDrawer}
                 >
                   <Link href={`${el.link}`}>{el.title}</Link>
                 </li>

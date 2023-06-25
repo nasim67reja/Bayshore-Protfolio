@@ -33,7 +33,7 @@ quickLinks = [
 const Col = ({ text, links }: any) => {
   return (
     <div className="flex-1 md:translate-x-[20%] lg:translate-x-[30%]">
-      <h4 className="mb-10 heading-four text-center">{text}</h4>
+      <h4 className="mb-10 heading-four text-center md:text-start">{text}</h4>
       <ul className="flex flex-col gap-2">
         {links.map((el: any, i: number) => (
           <li className="text-small" key={i}>
@@ -82,15 +82,14 @@ const Footer = () => {
               <BsLinkedin className="w-[2rem] lg:w-[2.8rem] h-auto" />
               <AiFillTwitterCircle className="w-[2.6rem] lg:w-[3.4rem] h-auto" />
             </div>
-            {/* <input
-              className="placeholder-center rounded-[10px] outline-none text-link py-4 px-4 bg-[#EAEAEA]"
-              type="text"
-              placeholder="Enter your email"
-            />
-            <button className="btn text-link">Get a Proposal</button> */}
           </div>
         </div>
-        <div>footer-bottom</div>
+        <div className="w-full mt-[5px] h-[1px] bg-[#DBDBDB]"></div>
+        <div>
+          <p className="text-small">
+            Copyright © 2023 All Rights Reserved by Bayshore Communication.
+          </p>
+        </div>
       </SectionLayout>
     </footer>
   );

@@ -1,12 +1,10 @@
 import AboutUs from "@/components/universal/AboutUs";
 import Boost from "@/components/universal/Boost";
-import HeroLeft from "@/components/universal/HeroLeft";
-import HeroRight from "@/components/universal/HeroRight";
+import Hero from "@/components/universal/Hero";
 import Info from "@/components/universal/Info";
 import Results from "@/components/universal/Results";
 import SectionLayout from "@/components/universal/SectionLayout";
 import { Metadata } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,23 +18,15 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="flex justify-between items-center gap-12">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <HeroRight />
-        </div>
-      </SectionLayout>
+      <Hero heading={hero[0].heading} description={hero[0].description} />
       {/* FLexiblity */}
       <SectionLayout bg="">
         <h2 className="heading-secondary text-center ">
           Flexibility at its Best: From One-Time Assessments to Complete
           Marketing Solutions
         </h2>
-        <div className="mt-8 custom-shadow py-[7rem] px-[10rem]">
-          <div className="flex  justify-between items-center">
+        <div className="mt-8 custom-shadow md:py-[7rem] md:px-[10rem] py-[3rem] px-[1rem] sm:px-[4rem] ">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center   gap-4">
             <div>
               <h4 className="heading-four text-center mb-4">
                 Budget-Friendly Options
@@ -46,19 +36,19 @@ const page = () => {
                 to you.
               </p>
             </div>
-            <div>
+            <div className="justify-self-center">
               <Image
                 src="/assets/growth-plan/option.svg"
                 alt="option"
                 width={300}
                 height={300}
-                className="w-[14rem] h-auto"
+                className="w-[8rem] md:w-[12rem] lg:w-[14rem] h-auto"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex  mt-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  mt-12 gap-8">
           <FLexCol
             heading="Flexibility to Test and Experiment"
             description="We’ll build you a high performing engine and you run it by yourself."
@@ -77,7 +67,7 @@ const page = () => {
 
       <SectionLayout bg="">
         <div className="flex flex-col items-center">
-          <h2 className="heading-secondary text-center max-w-[800px] mx-auto ">
+          <h2 className="heading-secondary !text-center max-w-[800px] mx-auto ">
             Affordable Marketing Solutions to Fit Your Budget with our Value
             Package
           </h2>
@@ -98,7 +88,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-8">
-          <div className="flex gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem]   items-center">
             <Package />
             <Package />
             <Package />
@@ -155,7 +145,7 @@ const PackageBulletPoint = () => {
 
 const Package = () => {
   return (
-    <div className="flex-1 ">
+    <div className="w-[30rem] sm:w-[35rem] md:w-full justify-self-center mt-[4rem] md:mt-0">
       <div className="relative flex flex-col items-center gap-4 bg-[#F0F6FE] py-[6rem]">
         <div className="absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <Image
@@ -203,7 +193,7 @@ export const FLexCol: React.FC<content> = ({
 }) => {
   return (
     <>
-      <div className="flex-1 flex flex-col  items-center custom-shadow p-12 gap-6">
+      <div className="flex flex-col  items-center custom-shadow p-12 gap-6">
         <div>
           <h4 className="heading-four text-center mb-4">{heading}</h4>
           <p className="text-base !text-center">{description}</p>
@@ -214,7 +204,7 @@ export const FLexCol: React.FC<content> = ({
             alt="option"
             width={300}
             height={300}
-            className="w-[10rem] h-auto"
+            className="w-[6rem] md:w-[8rem] lg:w-[10rem] h-auto"
           />
         </div>
       </div>

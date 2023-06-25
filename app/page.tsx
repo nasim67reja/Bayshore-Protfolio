@@ -6,7 +6,7 @@ import HomeTabBar from "@/components/unique/HomeTabBar";
 import AboutUs from "@/components/universal/AboutUs";
 import Boost from "@/components/universal/Boost";
 import Footer from "@/components/universal/Footer";
-import { HeroForm } from "@/components/universal/HeroLeft";
+import HeroLeft, { HeroForm } from "@/components/universal/HeroLeft";
 import Info from "@/components/universal/Info";
 import Navbar from "@/components/universal/Navbar";
 import Results from "@/components/universal/Results";
@@ -27,13 +27,14 @@ const page = () => {
       <Navbar />
       <SectionLayout bg="bg-[#F4F4F4]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-[72px] items-center">
-          <div className="flex flex-col justify-center items-center md:block">
-            <p className="text-base !text-[#3E7BE2] mb-[1.5rem] lg:mb-[2.5rem]">
+          <div>
+            <p className="text-[2rem] text-center md:text-start text-[#3E7BE2] mb-[1.5rem] lg:mb-[2.5rem]">
               {hero[0].text}
             </p>
-            <h1 className="heading-primary">{hero[0].heading}</h1>
-            <p className="text-base ">{hero[0].description}</p>
-            <HeroForm />
+            <HeroLeft
+              heading={hero[0].heading}
+              description={hero[0].description}
+            />
           </div>
           <div className="px-[2rem] sm:px-[6rem] md:px-0">
             <Image
@@ -125,7 +126,7 @@ to create, engage, and convert leads. Plus, our exclusive tech-powered tools giv
               efficiency. Get in touch today and get ahead of the competition.
             </p>
           </div>
-          <div className="row-start-1 flex flex-col gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
+          <div className="row-start-1 flex flex-col gap-8 lg:gap-12 pl-[5rem] sm:px-[15vw] md:px-0">
             <Progress
               title="Business Automation"
               bg="bg-[#FFBF45]"

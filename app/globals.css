@@ -26,10 +26,13 @@ import "~slick-carousel/slick/slick-theme.css"; */
   @apply text-[1.6rem] md:text-[1.3rem] lg:text-[1.4rem] text-[#343];
 }
 .text-small {
-  @apply text-[1.6rem] sm:text-[1.4rem] lg:text-[1.4rem] text-[#343] leading-[1.4] text-center  md:text-justify;
+  @apply text-[1.5rem] sm:text-[1.4rem] lg:text-[1.4rem] text-[#343] leading-[1.4] text-center  md:text-justify;
+}
+.text-xsmall {
+  @apply text-[1.3rem]  text-[#343] leading-[1.4] text-center  md:text-justify;
 }
 .text-base {
-  @apply text-[1.7rem] sm:text-[1.8rem] md:text-[1.6rem] leading-[143%] text-center  md:text-justify text-[#343];
+  @apply text-[1.6rem] sm:text-[1.8rem] md:text-[1.6rem] leading-[143%] text-center  md:text-justify text-[#343];
 }
 .info-text {
   @apply text-[2.2rem] md:text-[3rem]  text-[#fff];
@@ -46,7 +49,10 @@ import "~slick-carousel/slick/slick-theme.css"; */
   @apply text-headingPrimary font-semibold text-[2rem] md:text-[2rem] lg:text-[2.4rem] mb-[1rem] text-center md:text-start;
 }
 .heading-four {
-  @apply text-headingPrimary font-semibold text-[1.8rem] lg:text-[1.8rem] leading-[1.2];
+  @apply text-headingPrimary font-semibold text-[1.6rem] lg:text-[1.8rem] leading-[1.2] text-center md:text-start;
+}
+.heading-five {
+  @apply text-headingPrimary font-semibold text-[1.5rem] lg:text-[1.7rem] leading-[1.2] text-center md:text-start;
 }
 /* button */
 .btn {
@@ -240,5 +246,24 @@ body {
   .custom-info {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+}
+
+@media (max-width: 60.25em) {
+  .cus-name {
+    width: 75% !important;
+  }
+}
+
+@media (max-width: 55em) {
+  .cus-form {
+    flex-direction: column !important;
+  }
+  .cus-form input,
+  .cus-form button {
+    width: 100%;
+  }
+  .cus-form button {
+    justify-content: center;
   }
 }

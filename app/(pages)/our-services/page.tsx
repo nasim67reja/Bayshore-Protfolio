@@ -1,5 +1,6 @@
 import AboutUs from "@/components/universal/AboutUs";
 import Consultaion from "@/components/universal/Consultaion";
+import Hero from "@/components/universal/Hero";
 import HeroLeft from "@/components/universal/HeroLeft";
 import HeroRight from "@/components/universal/HeroRight";
 import Info from "@/components/universal/Info";
@@ -35,15 +36,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <SectionLayout bg="bg-[#F4F4F4]">
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-16">
-          <HeroLeft
-            heading={hero[0].heading}
-            description={hero[0].description}
-          />
-          <HeroRight />
-        </div>
-      </SectionLayout>
+      <Hero heading={hero[0].heading} description={hero[0].description} />
       <Info />
       <SectionLayout bg="">
         <h2 className="heading-secondary text-center">Our Services</h2>
@@ -206,7 +199,7 @@ const Service: React.FC<ServiceProps> = ({ el }) => {
           alt="service-hero"
           width={399}
           height={400}
-          className="w-[99px] h-[99px] mb-[1.5rem]"
+          className="w-[8rem] h-[8rem] md:w-[9.9rem] md:h-[9.9rem] mb-[1rem] md:mb-[1.5rem]"
         />
       </div>
       <h4 className="heading-four">{el.title}</h4>
