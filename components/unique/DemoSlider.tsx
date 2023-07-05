@@ -16,8 +16,7 @@ interface Settings3 {
   centerPadding: string;
   arrows: boolean;
   fade: boolean;
-  swipe: boolean;
-  draggable: boolean;
+  
 }
 
 interface Settings2 {
@@ -28,8 +27,6 @@ interface Settings2 {
   centerMode: boolean;
   centerPadding: string;
   arrows: boolean;
-  swipe: boolean;
-  draggable: boolean;
   focusOnSelect: boolean;
 }
 
@@ -68,9 +65,7 @@ const FocusOnSelect: React.FC = () => {
     centerMode: true,
     centerPadding: "0px",
     arrows: false,
-    swipe: false,
-    draggable: false,
-    focusOnSelect: false,
+    focusOnSelect: true,
   };
 
   const settings3: Settings3 = {
@@ -83,8 +78,6 @@ const FocusOnSelect: React.FC = () => {
     centerPadding: "0px",
     arrows: false,
     fade: true,
-    swipe: false,
-    draggable: false,
   };
 
   // const [nav1, setNav1] = useState<Slider | null>(null);
